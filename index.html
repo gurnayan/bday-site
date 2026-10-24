@@ -1,0 +1,2639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>🎂 SHREYA'S BIRTHDAY!! 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800;900&family=Dancing+Script:wght@700&family=Boogaloo&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --pink:#FF6B9D;--bubblegum:#FF4D94;--peach:#FFB085;--coral:#FF7B6B;
+  --yellow:#FFE566;--sky:#87CEEB;--mint:#98F5C4;--lavender:#C8A8E9;
+  --cherry:#DC143C;--cream:#FFF8F0;--white:#FFFFFF;--gold:#FFD700;
+}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Nunito',sans-serif;
+  background:#FFF0F5;
+  overflow-x:hidden;
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ctext y='24' font-size='22'%3E🎈%3C/text%3E%3C/svg%3E"),auto;
+}
+::-webkit-scrollbar{width:10px;}
+::-webkit-scrollbar-track{background:#FFE4EE;}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--pink),var(--lavender));border-radius:10px;}
+
+/* ══════════════ RAINBOW BG ══════════════ */
+@keyframes rainbowBg{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+@keyframes wiggle{0%,100%{transform:rotate(-4deg);}50%{transform:rotate(4deg);}}
+@keyframes bounceIn{0%{transform:scale(0) rotate(-20deg);opacity:0;}60%{transform:scale(1.2) rotate(5deg);}100%{transform:scale(1) rotate(0);opacity:1;}}
+@keyframes floatUp{0%{transform:translateY(0);}50%{transform:translateY(-18px);}100%{transform:translateY(0);}}
+@keyframes spin{to{transform:rotate(360deg);}}
+@keyframes shimmer{0%{background-position:0%;}100%{background-position:200%;}}
+@keyframes jellyPop{0%{transform:scale(1);}25%{transform:scale(1.4,0.7);}50%{transform:scale(0.7,1.3);}75%{transform:scale(1.15,0.9);}100%{transform:scale(1);}}
+@keyframes slideDown{from{transform:translateY(-60px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+@keyframes heartBeat{0%,100%{transform:scale(1);}14%{transform:scale(1.25);}28%{transform:scale(1);}42%{transform:scale(1.2);}70%{transform:scale(1);}}
+@keyframes confettiFall{0%{opacity:1;transform:translateY(0) rotate(0deg) translateX(0);}100%{opacity:0;transform:translateY(110vh) rotate(720deg) translateX(var(--drift));}}
+@keyframes wobbleText{0%,100%{letter-spacing:2px;color:#FF6B9D;}25%{letter-spacing:6px;color:#FFD700;}50%{letter-spacing:1px;color:#87CEEB;}75%{letter-spacing:8px;color:#98F5C4;}}
+@keyframes rainbowText{0%{color:#FF6B9D;}16%{color:#FFB085;}33%{color:#FFE566;}50%{color:#98F5C4;}66%{color:#87CEEB;}83%{color:#C8A8E9;}100%{color:#FF6B9D;}}
+@keyframes pop{0%{transform:scale(1);}40%{transform:scale(0.8);}70%{transform:scale(1.15);}100%{transform:scale(1);}}
+@keyframes flyAway{to{transform:translateY(-120vh) rotate(720deg) scale(0);opacity:0;}}
+@keyframes shake{0%,100%{transform:translateX(0);}20%{transform:translateX(-8px);}40%{transform:translateX(8px);}60%{transform:translateX(-6px);}80%{transform:translateX(6px);}}
+@keyframes glitter{0%,100%{filter:brightness(1) hue-rotate(0deg);}50%{filter:brightness(1.4) hue-rotate(180deg);}}
+
+/* ══════════════ INTRO / GAME SCREEN ══════════════ */
+#intro{
+  position:fixed;inset:0;z-index:9999;
+  background:linear-gradient(135deg,#FFD6E7 0%,#FFF0BA 25%,#C8F0D8 50%,#C8E8FF 75%,#E8C8FF 100%);
+  background-size:400% 400%;
+  animation:rainbowBg 5s ease infinite;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+  overflow:hidden;
+  transition:all 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+}
+#intro.bye{transform:scale(1.08) rotate(2deg);opacity:0;pointer-events:none;}
+
+/* wobble title */
+.intro-title{
+  font-family:'Fredoka One',cursive;
+  font-size:clamp(2rem,6vw,4.5rem);
+  text-align:center;
+  margin-top:88px;
+  animation:wobbleText 3s ease-in-out infinite;
+  text-shadow:3px 3px 0 rgba(0,0,0,0.08);
+  line-height:1.2;
+  position:relative;z-index:5;
+  padding:0 15px;
+}
+.intro-subtitle{
+  font-family:'Boogaloo',cursive;
+  font-size:clamp(1rem,3vw,1.5rem);
+  text-align:center;
+  color:#9B59B6;
+  margin:8px 0 15px;
+  position:relative;z-index:5;
+  animation:floatUp 2s ease-in-out infinite;
+  padding:0 15px;
+}
+.intro-note{
+  position:relative;z-index:5;
+  width:min(92%,760px);padding:12px 18px;margin:0 auto 8px;
+  border:2px solid rgba(255,107,157,0.25);border-radius:20px;
+  background:rgba(255,255,255,0.72);box-shadow:0 8px 24px rgba(160,80,140,0.12);
+  text-align:center;color:#75486f;
+  font-family:'Boogaloo',cursive;font-size:clamp(0.88rem,2.2vw,1.08rem);line-height:1.35;
+}
+.intro-note p+p{margin-top:4px;}
+
+/* BALLOON GAME ARENA */
+#balloon-arena{
+  position:relative;
+  width:100%;flex:1;
+  overflow:hidden;
+}
+.arena-label{
+  text-align:center;
+  font-family:'Fredoka One',cursive;
+  font-size:clamp(0.9rem,2.5vw,1.3rem);
+  color:#FF6B9D;
+  position:relative;z-index:5;
+  animation:floatUp 1.5s ease-in-out infinite;
+  pointer-events:none;
+  padding:5px;
+}
+
+.game-balloon{
+  position:absolute;
+  cursor:pointer;
+  user-select:none;
+  -webkit-user-select:none;
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+  z-index:50;
+  pointer-events:auto;
+  transition:transform 0.15s cubic-bezier(.34,1.56,.64,1);
+  filter:drop-shadow(0 8px 18px rgba(0,0,0,0.18));
+}
+.game-balloon svg{display:block;pointer-events:none;}
+.game-balloon:hover{transform:scale(1.15) rotate(4deg)!important;filter:drop-shadow(0 12px 24px rgba(255,107,157,0.4));}
+.game-balloon:active{transform:scale(0.85)!important;}
+.game-balloon.popping{
+  animation:jellyPop 0.28s forwards!important;
+  pointer-events:none;
+}
+
+@keyframes balloonRise{
+  0%{transform:translateY(105vh) rotate(-3deg);opacity:0.95;}
+  50%{transform:translateY(50vh) rotate(5deg);opacity:1;}
+  100%{transform:translateY(-150px) rotate(-6deg);opacity:0.9;}
+}
+@keyframes balloonBob{
+  0%,100%{transform:translateY(0) rotate(-4deg);}
+  50%{transform:translateY(-22px) rotate(4deg);}
+}
+
+/* POP SCORE */
+#score-wrap{
+  position:fixed;top:18px;left:50%;
+  transform:translateX(-50%);
+  z-index:9999;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(12px);
+  border-radius:50px;
+  padding:10px 28px;
+  font-family:'Fredoka One',cursive;
+  font-size:1.2rem;
+  color:#FF6B9D;
+  box-shadow:0 6px 25px rgba(255,107,157,0.25);
+  border:2px solid rgba(255,180,220,0.4);
+  display:none;
+  gap:18px;
+  align-items:center;
+  white-space:nowrap;
+}
+#score-wrap.show{display:flex;}
+
+/* POP BURST */
+.pop-burst{
+  position:fixed;
+  pointer-events:none;
+  z-index:9999;
+  font-size:2rem;
+  animation:jellyPop 0.4s ease forwards;
+}
+
+/* STAR BURST effect at click */
+.star-burst{
+  position:fixed;
+  pointer-events:none;
+  z-index:99999;
+  animation:burstAway 0.6s ease-out forwards;
+}
+@keyframes burstAway{
+  0%{transform:scale(0);opacity:1;}
+  50%{opacity:1;}
+  100%{transform:scale(2.5) translateY(-40px);opacity:0;}
+}
+
+/* ENTER BTN */
+.enter-btn{
+  position:relative;z-index:10;
+  font-family:'Fredoka One',cursive;
+  font-size:clamp(1rem,3vw,1.4rem);
+  background:linear-gradient(135deg,#FF6B9D,#FFD700,#87CEEB,#98F5C4);
+  background-size:300% 300%;
+  animation:rainbowBg 2s linear infinite;
+  color:white;
+  border:none;padding:16px 50px;
+  border-radius:60px;
+  cursor:pointer;
+  margin-bottom:25px;
+  box-shadow:0 8px 30px rgba(255,107,157,0.4);
+  transition:transform 0.2s;
+  letter-spacing:1px;
+  text-shadow:1px 1px 2px rgba(0,0,0,0.15);
+}
+.enter-btn:hover{transform:scale(1.08) rotate(-2deg);}
+.enter-btn:active{transform:scale(0.95);}
+
+/* BALLOON COUNTER BADGE */
+.pop-badge{
+  display:inline-block;
+  background:linear-gradient(135deg,#FF6B9D,#C8A8E9);
+  color:white;
+  border-radius:50px;
+  padding:4px 14px;
+  font-family:'Fredoka One',cursive;
+  font-size:1rem;
+  margin-left:5px;
+}
+
+/* CONFETTI GLOBAL */
+.conf{
+  position:fixed;
+  width:10px;height:10px;
+  top:-20px;
+  pointer-events:none;
+  z-index:99999;
+  border-radius:3px;
+  animation:confettiFall linear forwards;
+}
+
+/* ══════════════ MAIN SITE ══════════════ */
+#main{opacity:0;transition:opacity 1s ease;}
+#main.show{opacity:1;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:15px;left:50%;transform:translateX(-50%);
+  z-index:5000;
+  background:rgba(255,255,255,0.8);backdrop-filter:blur(15px);
+  border-radius:60px;padding:10px 25px;
+  display:flex;gap:20px;align-items:center;
+  box-shadow:0 6px 25px rgba(255,107,157,0.2);
+  border:2px solid rgba(255,180,220,0.3);
+}
+nav a{
+  text-decoration:none;font-family:'Fredoka One',cursive;
+  font-size:0.85rem;color:#A07090;
+  transition:all 0.2s;display:flex;flex-direction:column;align-items:center;gap:1px;
+}
+nav a:hover{color:var(--pink);transform:scale(1.15) rotate(-5deg);}
+.nav-icon{font-size:1.2rem;}
+
+/* ── PROGRESS BAR ── */
+#pbar{
+  position:fixed;top:0;left:0;right:0;height:5px;
+  background:linear-gradient(90deg,#FF6B9D,#FFD700,#98F5C4,#87CEEB,#C8A8E9,#FF6B9D);
+  background-size:300% 100%;
+  animation:rainbowBg 2s linear infinite;
+  transform-origin:left;transform:scaleX(0);z-index:99999;transition:transform 0.1s;
+}
+
+/* ── BACK TO TOP ── */
+#btop{
+  position:fixed;bottom:25px;right:25px;
+  width:55px;height:55px;border-radius:50%;
+  background:linear-gradient(135deg,#FF6B9D,#FFD700);
+  border:none;cursor:pointer;font-size:1.4rem;
+  box-shadow:0 6px 20px rgba(255,107,157,0.4);
+  z-index:4000;opacity:0;transform:translateY(20px);
+  transition:all 0.3s;color:white;
+  font-family:'Fredoka One',cursive;
+}
+#btop.show{opacity:1;transform:translateY(0);}
+#btop:hover{transform:scale(1.2) rotate(15deg);}
+
+/* ══════════════ HERO ══════════════ */
+#hero{
+  min-height:100vh;padding:100px 20px 60px;
+  background:linear-gradient(160deg,#FFD6E7 0%,#FFF0BA 30%,#C8F5DF 60%,#C8E8FF 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;position:relative;overflow:hidden;
+}
+
+.hero-title{
+  font-family:'Fredoka One',cursive;
+  font-size:clamp(3rem,9vw,7rem);
+  line-height:1.1;
+  background:linear-gradient(135deg,#FF6B9D 0%,#FFD700 40%,#87CEEB 70%,#C8A8E9 100%);
+  background-size:300%;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 3s linear infinite;
+  text-shadow:none;
+  margin-bottom:10px;
+  cursor:pointer;
+  transition:transform 0.2s;
+}
+.hero-title:hover{transform:scale(1.04) rotate(-1deg);}
+
+.hero-sub{
+  font-family:'Boogaloo',cursive;
+  font-size:clamp(1.1rem,3vw,1.7rem);
+  animation:rainbowText 3s linear infinite;
+  margin-bottom:25px;
+}
+
+/* INTERACTIVE CAKE */
+.cake-scene{
+  position:relative;
+  cursor:pointer;
+  transition:transform 0.3s;
+  margin:20px auto;
+  display:inline-block;
+}
+.cake-scene:hover{transform:scale(1.05) rotate(-1deg);}
+.cake-scene:active{transform:scale(0.96);}
+.cake-scene .hint{
+  font-family:'Boogaloo',cursive;
+  font-size:1rem;color:#FF6B9D;
+  text-align:center;
+  margin-top:8px;
+  animation:floatUp 1.5s ease-in-out infinite;
+}
+
+/* CAKE LAYERS */
+.cake{position:relative;width:200px;margin:0 auto;}
+.cake-top2{
+  width:180px;height:55px;margin:0 auto;
+  background:linear-gradient(135deg,#FF9DC6,#FFB3D9);
+  border-radius:15px 15px 0 0;
+  position:relative;overflow:hidden;
+  box-shadow:inset 0 -4px 10px rgba(0,0,0,0.1);
+}
+.cake-top2::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:14px;
+  background:repeating-linear-gradient(90deg,#FF6BAD 0,#FF6BAD 10px,#FF9DC6 10px,#FF9DC6 20px);
+}
+.cake-mid2{
+  width:200px;height:60px;margin:0 auto;
+  background:linear-gradient(135deg,#FFE08A,#FFC645);
+  position:relative;overflow:hidden;
+  box-shadow:inset 0 -4px 10px rgba(0,0,0,0.1);
+}
+.cake-bot2{
+  width:220px;height:70px;
+  background:linear-gradient(135deg,#C8A8E9,#B088D9);
+  border-radius:0 0 20px 20px;margin:0 auto;
+  box-shadow:0 12px 35px rgba(180,130,220,0.4);
+  overflow:hidden;
+}
+.cake-plate2{
+  width:240px;height:18px;
+  background:linear-gradient(135deg,#FFF0E0,#FFE0C0);
+  border-radius:50%;margin:-3px auto 0;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+.frosting-row{
+  display:flex;justify-content:space-evenly;padding:0 5px;
+  position:relative;margin-bottom:-3px;
+}
+.drip{
+  width:15px;height:26px;background:white;
+  border-radius:0 0 10px 10px;opacity:0.9;
+}
+.candle-row{
+  display:flex;justify-content:space-evenly;padding:0 15px;
+  align-items:flex-end;margin-bottom:-2px;
+}
+.c-candle{
+  display:flex;flex-direction:column;align-items:center;
+  cursor:pointer;
+  transition:transform 0.2s;
+}
+.c-candle:hover{transform:scale(1.3);}
+.c-body{width:10px;height:32px;border-radius:3px 3px 0 0;}
+.c-flame{
+  width:12px;height:18px;
+  border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+  animation:flicker 0.25s ease-in-out infinite alternate;
+  transform-origin:bottom;
+  transition:all 0.3s;
+}
+.c-flame.out{opacity:0;transform:scale(0);}
+@keyframes flicker{
+  0%{transform:scaleX(1) scaleY(1) rotate(-3deg);}
+  100%{transform:scaleX(0.8) scaleY(1.1) rotate(3deg);}
+}
+.c-smoke{
+  width:6px;height:20px;
+  background:linear-gradient(to top,rgba(180,180,180,0.5),transparent);
+  border-radius:5px;margin:0 auto;
+  display:none;
+  animation:smokeRise 1s ease-out forwards;
+}
+@keyframes smokeRise{0%{opacity:0.8;transform:translateY(0);}100%{opacity:0;transform:translateY(-25px);}}
+.c-candle.blown .c-flame{display:none;}
+.c-candle.blown .c-smoke{display:block;}
+.mic-control{display:flex;flex-direction:column;align-items:center;gap:8px;margin:14px auto 0;}
+.mic-button{
+  border:0;border-radius:30px;padding:11px 22px;background:linear-gradient(135deg,#FF6B9D,#C8A8E9);
+  box-shadow:0 5px 18px rgba(255,107,157,.25);color:#fff;
+  font:1rem 'Fredoka One',cursive;cursor:pointer;
+}
+.mic-button:hover{transform:translateY(-2px);}
+.mic-status{max-width:560px;min-height:24px;color:#8A5090;font:1rem 'Boogaloo',cursive;}
+
+/* CLICK COUNTER ON CAKE */
+.cake-clicks{
+  font-family:'Fredoka One',cursive;
+  font-size:1rem;color:#FF6B9D;
+  text-align:center;
+  margin-top:5px;
+  min-height:24px;
+}
+
+/* FLOATING EMOJIS */
+.floatie{
+  position:fixed;
+  pointer-events:none;z-index:9998;
+  font-size:24px;
+  animation:flyEmoji 2.5s ease-out forwards;
+}
+@keyframes flyEmoji{
+  0%{opacity:1;transform:translateY(0) rotate(0deg) scale(1);}
+  100%{opacity:0;transform:translateY(-200px) rotate(360deg) scale(0);}
+}
+
+/* ══════════════ SECTIONS ══════════════ */
+.rainbow-bar{
+  width:100%;height:6px;
+  background:linear-gradient(90deg,#FF6B9D,#FFE566,#98F5C4,#87CEEB,#C8A8E9,#FF6B9D);
+  background-size:200% 100%;
+  animation:rainbowBg 3s linear infinite;
+}
+
+/* ── MEMORY / POLAROIDS ── */
+#memories{
+  padding:90px 20px 80px;
+  background:linear-gradient(160deg,#FFF0BA 0%,#FFD6E7 55%,#C8F5DF 100%);
+}
+.section-header{text-align:center;margin-bottom:50px;}
+.section-badge{
+  display:inline-block;
+  background:linear-gradient(135deg,#FF6B9D,#C8A8E9);
+  color:white;font-family:'Fredoka One',cursive;
+  font-size:1rem;padding:8px 24px;border-radius:50px;
+  margin-bottom:12px;letter-spacing:1px;
+  box-shadow:0 6px 20px rgba(255,107,157,0.3);
+  animation:floatUp 2s ease-in-out infinite;
+}
+.section-title{
+  font-family:'Fredoka One',cursive;
+  font-size:clamp(2rem,5vw,3.5rem);
+  animation:rainbowText 3s linear infinite;
+  margin-bottom:8px;
+}
+.section-sub{
+  font-family:'Boogaloo',cursive;
+  font-size:1.1rem;color:#A08090;
+}
+
+.photo-placeholder{
+  max-width:760px;min-height:180px;margin:0 auto;padding:30px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+  border:2px dashed rgba(255,107,157,.55);border-radius:24px;
+  background:rgba(255,255,255,.6);text-align:center;color:#815d83;
+  font:1.15rem/1.5 'Boogaloo',cursive;
+}
+.photo-placeholder-icon{font-size:3rem;}
+.memory-grid{
+  max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;
+}
+.memory-card{
+  background:rgba(255,255,255,.7);border:2px solid rgba(255,107,157,.25);border-radius:22px;padding:10px;box-shadow:0 12px 28px rgba(75,45,85,.1);overflow:hidden;transition:transform .25s ease, box-shadow .25s ease;
+}
+.memory-card:hover{transform:translateY(-8px) rotate(-1deg);box-shadow:0 18px 32px rgba(75,45,85,.16);}
+.memory-card img{
+  width:100%;height:300px;display:block;object-fit:cover;border-radius:16px;background:#f9ebf7;
+}
+
+/* ── FUNNY FACTS ── */
+#facts{
+  padding:90px 20px;
+  background:linear-gradient(160deg,#E8F5FF 0%,#FFE8F0 50%,#FFFDE7 100%);
+  text-align:center;
+}
+.facts-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;max-width:1000px;margin:0 auto;}
+.fact-card{
+  background:white;border-radius:24px;padding:28px 22px;
+  width:270px;cursor:pointer;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  transition:transform 0.3s cubic-bezier(.34,1.56,.64,1),box-shadow 0.3s;
+  position:relative;overflow:hidden;
+  border-top:5px solid;
+}
+.fact-card:hover{transform:translateY(-10px) rotate(-2deg);box-shadow:0 20px 50px rgba(0,0,0,0.15);}
+.fact-card:active{animation:jellyPop 0.3s;}
+.fact-icon{font-size:2.8rem;margin-bottom:10px;display:block;animation:floatUp 2.5s ease-in-out infinite;}
+.fact-title{font-family:'Fredoka One',cursive;font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;color:#bbb;margin-bottom:6px;}
+.fact-val{font-family:'Boogaloo',cursive;font-size:1.15rem;color:#5A4060;line-height:1.5;}
+.fact-card{font-family:inherit;text-align:center;}
+#personality{
+  padding:80px 20px;
+  background:linear-gradient(145deg,#FFF1F7 0%,#FFF8DC 52%,#EAF8FF 100%);
+  text-align:center;
+}
+.report-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;max-width:960px;margin:35px auto 0;text-align:left;}
+.report-card{padding:20px;border-radius:20px;background:#fff;box-shadow:0 8px 24px rgba(75,45,85,.09);}
+.report-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-family:'Fredoka One',cursive;color:#694d73;}
+.report-score{white-space:nowrap;color:#e84988;}
+.report-track{height:10px;margin:12px 0 8px;border-radius:99px;background:#f6e5ef;overflow:hidden;}
+.report-fill{height:100%;width:var(--score);border-radius:inherit;background:linear-gradient(90deg,#ff6b9d,#ffd166,#98f5c4);}
+.report-note{font-family:'Boogaloo',cursive;color:#886d8f;font-size:1rem;}
+.birthday-alert{
+  max-width:720px;margin:18px auto 24px;padding:18px 22px;border-radius:24px;
+  border:2px solid rgba(255,107,157,.25);background:rgba(255,255,255,.78);
+  box-shadow:0 8px 24px rgba(160,80,140,.12);text-align:center;
+}
+.birthday-alert h2{font:clamp(1.4rem,4vw,2rem) 'Fredoka One',cursive;color:#e84988;}
+.birthday-alert p{font:1.08rem/1.5 'Boogaloo',cursive;color:#75486f;margin-top:8px;}
+.birthday-countdown{display:block;margin-top:10px;font:1.2rem 'Fredoka One',cursive;color:#8b59a0;}
+#birthday-arcade{
+  padding:85px 20px;
+  background:linear-gradient(145deg,#FFF1F7 0%,#FFF8DC 52%,#EAF8FF 100%);
+  text-align:center;
+}
+.challenge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px;max-width:1000px;margin:35px auto 0;text-align:left;}
+.challenge-card{padding:24px;border:2px solid rgba(255,107,157,.16);border-radius:24px;background:rgba(255,255,255,.9);box-shadow:0 10px 28px rgba(75,45,85,.09);}
+.challenge-card h3{font:1.35rem 'Fredoka One',cursive;color:#e84988;margin-bottom:8px;}
+.challenge-card p{font:1rem/1.5 'Boogaloo',cursive;color:#795e80;margin-bottom:14px;}
+.challenge-card .fun-btn{width:100%;font-size:1rem;padding:12px 16px;}
+.challenge-status{min-height:44px;margin-top:12px;font:1rem/1.4 'Boogaloo',cursive;color:#785780;}
+.quiz-options{display:grid;gap:8px;}
+.quiz-option{padding:10px 12px;border:2px solid rgba(200,168,233,.45);border-radius:14px;background:#fff;color:#694d73;font:1rem 'Boogaloo',cursive;text-align:left;cursor:pointer;}
+.quiz-option:hover:not(:disabled){border-color:#FF6B9D;background:#fff4f8;}
+.quiz-option:disabled{cursor:default;opacity:.75;}
+.wish-form{display:grid;gap:10px;}
+.wish-input{width:100%;min-height:76px;padding:12px;border:2px solid rgba(200,168,233,.45);border-radius:14px;resize:vertical;font:1rem 'Boogaloo',cursive;color:#694d73;}
+.wish-wall{display:grid;gap:8px;margin-top:12px;}
+.wish-note{padding:10px 12px;border-radius:14px;background:linear-gradient(135deg,#fff0f6,#fff9df);font:1rem/1.4 'Boogaloo',cursive;color:#694d73;overflow-wrap:anywhere;}
+#open-when{
+  padding:85px 20px;
+  background:linear-gradient(150deg,#F0FFF0 0%,#FFF4E5 55%,#FFE8F5 100%);
+  text-align:center;
+}
+.open-when-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;max-width:1000px;margin:35px auto 0;}
+.open-when-card{
+  width:min(100%,300px);min-height:130px;padding:20px;border:2px solid rgba(255,107,157,.18);
+  border-radius:22px;background:white;box-shadow:0 8px 24px rgba(75,45,85,.09);
+  color:#684b70;text-align:left;cursor:pointer;transition:transform .25s,box-shadow .25s;
+}
+.open-when-card:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:0 14px 30px rgba(75,45,85,.15);}
+.open-when-card strong{display:block;font:1.15rem 'Fredoka One',cursive;color:#e84988;margin-bottom:9px;}
+.open-when-card span{font:1rem 'Boogaloo',cursive;color:#896f90;}
+.open-when-status{margin-top:22px;font:1.05rem 'Boogaloo',cursive;color:#896f90;}
+#finale-content[hidden]{display:none;}
+
+/* ── LETTER ── */
+#letter{
+  padding:90px 20px;
+  background:linear-gradient(160deg,#FFF0E8 0%,#FFE8F5 50%,#F0E8FF 100%);
+  text-align:center;
+}
+.paper{
+  max-width:680px;margin:40px auto;
+  background:#FFFDF8;border-radius:4px;
+  padding:55px 45px;
+  box-shadow:0 3px 6px rgba(0,0,0,0.05),0 18px 40px rgba(0,0,0,0.1);
+  position:relative;border:1px solid rgba(0,0,0,0.05);
+  cursor:pointer;
+  transition:transform 0.3s;
+}
+.paper:hover{transform:scale(1.01) rotate(0.5deg);}
+.paper::before{
+  content:'';position:absolute;
+  left:72px;top:0;bottom:0;width:2px;
+  background:rgba(200,168,230,0.3);
+}
+.paper-lines{
+  position:absolute;inset:55px 0;
+  background-image:repeating-linear-gradient(transparent,transparent 37px,rgba(200,168,230,0.15) 37px,rgba(200,168,230,0.15) 38px);
+}
+.letter-date{text-align:right;font-family:'Dancing Script',cursive;font-size:1rem;color:var(--lavender);margin-bottom:28px;position:relative;z-index:1;}
+.letter-hey{font-family:'Dancing Script',cursive;font-size:2.1rem;color:var(--bubblegum);margin-bottom:22px;position:relative;z-index:1;}
+.letter-body{font-family:'Dancing Script',cursive;font-size:1.22rem;color:#5A4560;line-height:2.2;text-align:left;position:relative;z-index:1;}
+.letter-sign{text-align:right;margin-top:28px;position:relative;z-index:1;}
+.letter-sign p{font-family:'Dancing Script',cursive;font-size:1.1rem;color:#888;}
+.letter-sign h3{font-family:'Dancing Script',cursive;font-size:2rem;color:var(--bubblegum);}
+.stamp{
+  position:absolute;top:18px;right:18px;width:62px;height:76px;
+  border:3px solid var(--pink);border-radius:4px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-size:24px;padding:4px;
+  box-shadow:inset 0 0 0 4px rgba(255,139,172,0.2);
+  background:rgba(255,220,230,0.3);
+  animation:wiggle 3s ease-in-out infinite;
+}
+.stamp span{font-family:'Nunito',sans-serif;font-size:0.5rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--pink);}
+.wax{
+  position:absolute;bottom:-16px;right:45px;
+  width:46px;height:46px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#FF8FAB,var(--cherry));
+  display:flex;align-items:center;justify-content:center;font-size:20px;
+  box-shadow:0 4px 12px rgba(220,20,60,0.4);
+  border:3px solid rgba(255,255,255,0.5);
+  animation:heartBeat 1.5s ease-in-out infinite;
+}
+
+/* ── WISHES SECTION ── */
+#wishes{
+  padding:90px 20px;
+  background:linear-gradient(160deg,#F0FFF0 0%,#FFF9E6 50%,#FFF0F5 100%);
+  text-align:center;
+}
+.wishes-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;max-width:900px;margin:45px auto 0;}
+.wish{
+  background:white;border-radius:20px;padding:22px 18px;
+  width:190px;text-align:center;
+  box-shadow:0 6px 22px rgba(0,0,0,0.07);
+  cursor:pointer;border:2px solid transparent;
+  transition:transform 0.3s cubic-bezier(.34,1.56,.64,1),border-color 0.3s;
+}
+.wish:hover{transform:translateY(-10px) scale(1.05);border-color:var(--pink);}
+.wish:active{animation:jellyPop 0.3s;}
+.wish-icon{font-size:2.4rem;display:block;margin-bottom:8px;animation:floatUp 2s ease-in-out infinite;}
+.wish-txt{font-family:'Boogaloo',cursive;color:#7A5090;font-size:0.98rem;line-height:1.4;}
+
+/* ── FINALE ── */
+#finale{
+  min-height:100vh;padding:90px 20px;
+  background:linear-gradient(135deg,#FFD6E7 0%,#FFF0BA 25%,#C8F0D8 50%,#C8E8FF 75%,#E8C8FF 100%);
+  background-size:400% 400%;animation:rainbowBg 6s ease infinite;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;position:relative;overflow:hidden;
+}
+.finale-title{
+  font-family:'Fredoka One',cursive;
+  font-size:clamp(3rem,10vw,7rem);
+  animation:rainbowText 2s linear infinite,floatUp 3s ease-in-out infinite;
+  text-shadow:4px 4px 0 rgba(255,255,255,0.6);
+  line-height:1.15;margin-bottom:20px;
+}
+.finale-msg{
+  font-family:'Boogaloo',cursive;
+  font-size:clamp(1.1rem,3vw,1.6rem);
+  color:#8A5090;max-width:600px;line-height:1.8;margin-bottom:35px;
+}
+.big-heart{
+  font-size:6rem;display:inline-block;
+  animation:heartBeat 1.2s ease-in-out infinite;
+  filter:drop-shadow(0 0 20px rgba(255,100,150,0.6));
+  cursor:pointer;
+}
+.big-heart:active{animation:jellyPop 0.3s,heartBeat 1.2s ease-in-out infinite;}
+.finale-from{
+  font-family:'Dancing Script',cursive;font-size:2rem;
+  color:var(--cherry);margin-top:20px;
+}
+.fun-btns{display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:35px;}
+.fun-btn{
+  font-family:'Fredoka One',cursive;
+  font-size:1.1rem;color:white;border:none;
+  padding:15px 38px;border-radius:60px;cursor:pointer;
+  box-shadow:0 8px 28px rgba(0,0,0,0.15);
+  transition:transform 0.2s cubic-bezier(.34,1.56,.64,1);
+  letter-spacing:0.5px;
+}
+.fun-btn:hover{transform:scale(1.1) rotate(-3deg);}
+.fun-btn:active{transform:scale(0.92);}
+.fun-btn.a{background:linear-gradient(135deg,#FF6B9D,#FF4D94);}
+.fun-btn.b{background:linear-gradient(135deg,#FFD700,#FFB085);color:#7A4F00;}
+.fun-btn.c{background:linear-gradient(135deg,#87CEEB,#98F5C4);color:#205060;}
+
+/* ── POPUP ── */
+#popup{
+  position:fixed;inset:0;z-index:99990;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,210,230,0.8);backdrop-filter:blur(15px);
+  opacity:0;pointer-events:none;transition:opacity 0.35s;
+}
+#popup.on{opacity:1;pointer-events:all;}
+.popup-box{
+  background:white;border-radius:30px;padding:45px 38px;
+  max-width:480px;width:90%;text-align:center;
+  box-shadow:0 25px 70px rgba(255,107,157,0.3);
+  border:3px solid rgba(255,180,220,0.4);
+  animation:bounceIn 0.5s cubic-bezier(.34,1.56,.64,1);
+}
+.p-emoji{font-size:4rem;display:block;margin-bottom:12px;animation:heartBeat 1.5s ease-in-out infinite;}
+.p-title{font-family:'Fredoka One',cursive;font-size:2rem;animation:rainbowText 2s linear infinite;margin-bottom:10px;}
+.p-text{font-family:'Boogaloo',cursive;font-size:1.1rem;color:#7A5090;line-height:1.7;margin-bottom:20px;}
+.p-close{
+  background:linear-gradient(135deg,#FF6B9D,#C8A8E9);color:white;border:none;
+  padding:12px 35px;border-radius:40px;font-family:'Fredoka One',cursive;
+  font-size:1rem;cursor:pointer;transition:transform 0.2s;
+}
+.p-close:hover{transform:scale(1.08) rotate(-2deg);}
+
+/* ── FIREWORKS CANVAS ── */
+#fw{position:fixed;inset:0;pointer-events:none;z-index:99998;display:none;}
+
+/* ── AGE COUNTER ── */
+.age-row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:25px 0;}
+.age-box{
+  background:rgba(255,255,255,0.75);backdrop-filter:blur(10px);
+  border-radius:18px;padding:18px 22px;text-align:center;
+  box-shadow:0 6px 22px rgba(0,0,0,0.08);
+  border:2px solid rgba(255,180,220,0.3);min-width:85px;
+  cursor:pointer;transition:transform 0.2s cubic-bezier(.34,1.56,.64,1);
+}
+.age-box:hover{transform:scale(1.1) rotate(-3deg);}
+.age-box:active{animation:jellyPop 0.3s;}
+.age-num{font-family:'Fredoka One',cursive;font-size:2.3rem;color:var(--pink);display:block;line-height:1;}
+.age-lbl{font-family:'Boogaloo',cursive;font-size:0.75rem;text-transform:uppercase;letter-spacing:1.5px;color:#B090C0;margin-top:4px;}
+
+/* ── QUOTE SLIDER ── */
+#quotes{
+  padding:80px 20px;
+  background:linear-gradient(160deg,#F5F0FF 0%,#FFF5F8 100%);
+  text-align:center;
+}
+.quote-box{max-width:640px;margin:0 auto;position:relative;min-height:150px;}
+.qslide{
+  position:absolute;inset:0;opacity:0;transform:translateX(50px);
+  transition:opacity 0.5s ease,transform 0.5s ease;pointer-events:none;
+}
+.qslide.on{opacity:1;transform:translateX(0);pointer-events:all;}
+.q-text{
+  font-family:'Boogaloo',cursive;
+  font-size:clamp(1.1rem,3vw,1.5rem);
+  color:#6B4E7A;line-height:1.8;margin-bottom:12px;
+}
+.q-by{font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--pink);}
+.qdots{display:flex;gap:8px;justify-content:center;margin-top:28px;}
+.qdot{width:11px;height:11px;border-radius:50%;background:var(--lavender);cursor:pointer;transition:all 0.3s;}
+.qdot.on{background:var(--pink);transform:scale(1.35);}
+
+/* STICKER RAIN */
+.sticker-rain{
+  position:fixed;pointer-events:none;z-index:99997;
+  font-size:28px;top:-50px;
+  animation:confettiFall 3s linear forwards;
+}
+
+/* TOOLTIP */
+.tooltip{
+  position:fixed;z-index:99996;
+  background:rgba(255,255,255,0.9);backdrop-filter:blur(8px);
+  border-radius:20px;padding:8px 16px;
+  font-family:'Boogaloo',cursive;font-size:1rem;color:#FF6B9D;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  border:2px solid rgba(255,180,220,0.4);
+  pointer-events:none;
+  opacity:0;transition:opacity 0.2s;
+  white-space:nowrap;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  nav{gap:12px;padding:8px 18px;}
+  .paper{padding:40px 22px;}
+  .paper::before{left:0;}
+}
+</style>
+</head>
+<body>
+
+<!-- FIREWORKS -->
+<canvas id="fw"></canvas>
+
+<!-- POPUP -->
+<div id="popup">
+  <div class="popup-box">
+    <span class="p-emoji" id="p-emoji">🎉</span>
+    <h2 class="p-title" id="p-title">Yay!</h2>
+    <p class="p-text" id="p-text">Something fun!</p>
+    <button class="p-close" onclick="closePopup()">💖 Woohoo!</button>
+  </div>
+</div>
+
+<!-- PROGRESS BAR -->
+<div id="pbar"></div>
+
+<!-- BACK TO TOP -->
+<button id="btop" onclick="scrollTo({top:0,behavior:'smooth'})">🎈</button>
+
+<!-- TOOLTIP -->
+<div class="tooltip" id="tooltip"></div>
+
+<!-- ══════════════════════════════════════════ -->
+<!--              INTRO / GAME PAGE           -->
+<!-- ══════════════════════════════════════════ -->
+<div id="intro">
+  <h1 class="intro-title">OYYYY SHREYA GUPTA!!! 🎀💗</h1>
+  <p class="intro-subtitle">Haan haan, TERE LIYE HI HAI YE SAB.</p>
+  <div class="intro-note">
+    <p>Teri bestie Gurnayan ne apna precious time nikaal ke ye banaya hai, toh thoda emotional hona banta hai. 😭</p>
+    <p>Aaj tera birthday hai, madam. Attitude thoda kam, excitement thodi zyada.</p>
+    <p>Ab jaldi se button daba, itne nakhre kis baat ke? 🎂✨</p>
+  </div>
+  <p class="arena-label">Pop a few balloons, then kholo apna surprise! 🎈</p>
+
+  <!-- SCORE BAR -->
+  <div id="score-wrap">
+    <span>🎈 Popped: <span id="popped-count">0</span> / <span id="total-count">0</span></span>
+    <span>⭐ Score: <span id="score-pts">0</span></span>
+  </div>
+
+  <div id="balloon-arena">
+    <p class="arena-label">👆 Tap the balloons! Pop them all to continue! 💥</p>
+  </div>
+
+  <button class="enter-btn" id="enter-btn" onclick="enterSite()">
+    CHALO AB SURPRISE KHOLO 🎁
+  </button>
+  <button onclick="enterSite()" style="position:relative;z-index:60;background:rgba(255,255,255,0.75);border:1px solid rgba(255,107,157,0.3);border-radius:20px;padding:6px 20px;color:#A07090;font-family:'Boogaloo',cursive;font-size:0.95rem;cursor:pointer;margin-bottom:15px;transition:transform 0.2s;">
+    Skip balloons and open it now →
+  </button>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!--              MAIN SITE                   -->
+<!-- ══════════════════════════════════════════ -->
+<div id="main">
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero"><span class="nav-icon">🎂</span></a>
+    <a href="#birthday-arcade" aria-label="Birthday challenges"><span class="nav-icon">🎮</span></a>
+    <a href="#memories"><span class="nav-icon">📸</span></a>
+    <a href="#facts"><span class="nav-icon">🤩</span></a>
+    <a href="#letter"><span class="nav-icon">💌</span></a>
+    <a href="#open-when"><span class="nav-icon">💌</span></a>
+    <a href="#finale"><span class="nav-icon">🌟</span></a>
+  </nav>
+
+  <!-- ════ HERO ════ -->
+  <section id="hero">
+    <!-- Floating bg emojis -->
+    <div id="hero-bg-floats" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1;"></div>
+
+    <div style="position:relative;z-index:5;">
+      <h1 class="hero-title" onclick="titleClick(this)">HAPPY BIRTHDAY<br/>SHREYA GUPTA! 🎂</h1>
+      <p class="hero-sub">(click my name — something fun happens 👆)</p>
+      <div style="font-family:'Boogaloo',cursive;font-size:1.1rem;color:#9B59B6;margin-bottom:25px;animation:floatUp 2s ease-in-out infinite;">
+        🗓️ 25 October 2006 → Turning 20 on 25 October 2026! 🎊
+      </div>
+      <div class="birthday-alert">
+        <h2>🚨 SHREYA IS TURNING 20!!! 🚨</h2>
+        <p>Officially 20 years old, mentally depends on the situation. 😭</p>
+        <p>Bachpana abhi tak gaya nahi, maturity ka parcel abhi dispatch bhi nahi hua, lekin madam ka birthday aa gaya.</p>
+        <p>Welcome to your twenties, bestie! Ab thodi responsible ban ja… actually rehne de, tujhse na ho paayega. 💀🎀</p>
+        <span id="birthday-countdown" class="birthday-countdown" aria-live="polite">Counting down to 25 October 2026 🎂</span>
+      </div>
+
+      <!-- AGE COUNTER -->
+      <div class="age-row" id="age-row">
+        <div class="age-box" onclick="ageClick(this,'years')">
+          <span class="age-num" id="c-years">0</span>
+          <div class="age-lbl">Years Old</div>
+        </div>
+        <div class="age-box" onclick="ageClick(this,'days')">
+          <span class="age-num" id="c-days">0</span>
+          <div class="age-lbl">Days Alive</div>
+        </div>
+        <div class="age-box" onclick="ageClick(this,'hours')">
+          <span class="age-num" id="c-hours">0</span>
+          <div class="age-lbl">Hours</div>
+        </div>
+        <div class="age-box" onclick="ageClick(this,'mins')">
+          <span class="age-num" id="c-mins">0</span>
+          <div class="age-lbl">Minutes</div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE CAKE -->
+      <div class="cake-scene" id="cake-scene">
+        <div class="cake">
+          <!-- candles -->
+          <div class="candle-row">
+            <div class="c-candle" id="candle-0" onclick="blowCandle(event,0)">
+              <div class="c-flame" style="background:linear-gradient(to bottom,#FFF176,#FF8F00);"></div>
+              <div class="c-smoke"></div>
+              <div class="c-body" style="background:linear-gradient(135deg,#FF8FAB,#FFB3C6);"></div>
+            </div>
+            <div class="c-candle" id="candle-1" onclick="blowCandle(event,1)">
+              <div class="c-flame" style="background:linear-gradient(to bottom,#B3E5FC,#0288D1);"></div>
+              <div class="c-smoke"></div>
+              <div class="c-body" style="background:linear-gradient(135deg,#87CEEB,#64B5F6);"></div>
+            </div>
+            <div class="c-candle" id="candle-2" onclick="blowCandle(event,2)">
+              <div class="c-flame" style="background:linear-gradient(to bottom,#F8BBD0,#E91E63);"></div>
+              <div class="c-smoke"></div>
+              <div class="c-body" style="background:linear-gradient(135deg,#FFE082,#FFD54F);"></div>
+            </div>
+            <div class="c-candle" id="candle-3" onclick="blowCandle(event,3)">
+              <div class="c-flame" style="background:linear-gradient(to bottom,#E8C8FF,#9C27B0);"></div>
+              <div class="c-smoke"></div>
+              <div class="c-body" style="background:linear-gradient(135deg,#C8A8E9,#B388FF);"></div>
+            </div>
+            <div class="c-candle" id="candle-4" onclick="blowCandle(event,4)">
+              <div class="c-flame" style="background:linear-gradient(to bottom,#C8F5DF,#00897B);"></div>
+              <div class="c-smoke"></div>
+              <div class="c-body" style="background:linear-gradient(135deg,#98F5C4,#80CBC4);"></div>
+            </div>
+          </div>
+          <div style="position:relative;">
+            <div class="frosting-row" style="position:absolute;top:-10px;left:0;right:0;">
+              <div class="drip"></div><div class="drip"></div><div class="drip"></div><div class="drip"></div><div class="drip"></div>
+            </div>
+            <div class="cake-top2"></div>
+          </div>
+          <div class="cake-mid2"></div>
+          <div class="cake-bot2"></div>
+        </div>
+        <div class="cake-plate2"></div>
+        <div class="cake-clicks" id="cake-clicks">Blow into your microphone or tap each candle! 🕯️</div>
+      </div>
+      <div class="mic-control">
+        <button class="mic-button" id="mic-button" type="button" onclick="toggleCandleMicrophone()">🎙️ Enable microphone to blow candles</button>
+        <p class="mic-status" id="mic-status" role="status" aria-live="polite">Microphone access is optional. You can always tap the flames instead.</p>
+      </div>
+
+      <div style="margin-top:30px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+        <button class="fun-btn a" onclick="fireConfetti()">🎊 Confetti Rain!</button>
+        <button class="fun-btn b" onclick="fireworks()">🎆 Fireworks!</button>
+        <button class="fun-btn c" onclick="stickerRain()">🌈 Sticker Rain!</button>
+      </div>
+
+      <div style="margin-top:20px;font-family:'Boogaloo',cursive;font-size:1rem;color:#A090B0;animation:floatUp 2s ease-in-out infinite;">
+        Scroll down to explore your world 🎀 ↓
+      </div>
+    </div>
+  </section>
+
+  <section id="birthday-arcade">
+    <div class="section-header">
+      <div class="section-badge">🎮 Birthday Bestie Arcade</div>
+      <h2 class="section-title">Your birthday missions, Sheruuu!</h2>
+      <p class="section-sub">Three tiny challenges. Zero excuses, Lazy Baba. 😌</p>
+    </div>
+    <div class="challenge-grid">
+      <article class="challenge-card">
+        <h3>💖 Catch 20 hearts</h3>
+        <p>Can you tap the button 20 times before the 15-second timer runs out?</p>
+        <button type="button" class="fun-btn a" id="heart-challenge-button" onclick="tapHeartChallenge()">Start the challenge!</button>
+        <p class="challenge-status" id="heart-challenge-status" aria-live="polite">Ready, set, tap! 🏁</p>
+      </article>
+      <article class="challenge-card">
+        <h3>🛵 Scooty Panda quiz</h3>
+        <p>After the scooty incident, who got blamed and promoted to “Scooty Panda”?</p>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" onclick="answerBestieQuiz(this,false)">Shreya, the driver 🛵</button>
+          <button type="button" class="quiz-option" onclick="answerBestieQuiz(this,true)">Gurnayan, obviously 😭</button>
+          <button type="button" class="quiz-option" onclick="answerBestieQuiz(this,false)">The aunty 👀</button>
+        </div>
+        <p class="challenge-status" id="bestie-quiz-status" aria-live="polite">Pick your answer, witness. 👩‍⚖️</p>
+      </article>
+      <article class="challenge-card">
+        <h3>✨ Launch a birthday wish</h3>
+        <p>Type one wish for your twenties and send it into the birthday universe.</p>
+        <form class="wish-form" onsubmit="launchBirthdayWish(event)">
+          <textarea class="wish-input" id="birthday-wish-input" maxlength="180" placeholder="My wish for 20 is..." aria-label="Write a birthday wish" required></textarea>
+          <button type="submit" class="fun-btn c">Launch my wish! 🚀</button>
+        </form>
+        <div class="wish-wall" id="birthday-wish-wall" aria-live="polite"></div>
+        <p class="challenge-status" id="birthday-wish-status">Make it a good one, birthday girl. 🎂</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="rainbow-bar"></div>
+
+  <!-- ════ QUOTES ════ -->
+  <section id="quotes">
+    <div class="section-header">
+      <div class="section-badge">✨ Truths About Shreya</div>
+      <h2 class="section-title">Things Gurnayan knows for a fact 😤</h2>
+      <p class="section-sub">(click dots to change — or just wait)</p>
+    </div>
+    <div class="quote-box">
+      <div class="qslide on">
+        <p class="q-text">"She has this superpower of making everyone feel like the most important person in the room. Scientists are baffled. Gurnayan is not surprised." 🔬</p>
+        <p class="q-by">— Gurnayan, certified Shreya expert 💖</p>
+      </div>
+      <div class="qslide">
+        <p class="q-text">"Her laugh is so contagious the government should classify it as a public health risk. In a good way. Definitely in a good way." 😂</p>
+        <p class="q-by">— Best friend with personal experience 🌸</p>
+      </div>
+      <div class="qslide">
+        <p class="q-text">"She doesn't walk into rooms — she ARRIVES. The room upgrades itself. The vibes improve. People smile. Coincidence? ABSOLUTELY NOT." ✨</p>
+        <p class="q-by">— Gurnayan, eyewitness 🎀</p>
+      </div>
+      <div class="qslide">
+        <p class="q-text">"Twenty looks SO good on her it's honestly unfair to the rest of us. How does she do it? Nobody knows. Experts are studying." 💅</p>
+        <p class="q-by">— Very jealous but very proud best friend 💝</p>
+      </div>
+      <div class="qslide">
+        <p class="q-text">"Being friends with Shreya is like having a main character energy subscription. Free trial became lifetime membership and I am not complaining." 🎭</p>
+        <p class="q-by">— Gurnayan, 100% satisfied subscriber 🎈</p>
+      </div>
+    </div>
+    <div class="qdots" id="qdots"></div>
+  </section>
+
+  <div class="rainbow-bar"></div>
+
+  <!-- ════ MEMORIES ════ -->
+  <section id="memories">
+    <div class="section-header">
+      <div class="section-badge">📸 Memory Wall</div>
+      <h2 class="section-title">Our little scrapbook 🎀</h2>
+      <p class="section-sub">Our memories, told with our real photos 💕</p>
+    </div>
+    <div class="memory-grid">
+      <figure class="memory-card"><img src="memories/memory-1.png" alt="Shreya memory 1"></figure>
+      <figure class="memory-card"><img src="memories/memory-2.png" alt="Shreya memory 2"></figure>
+      <figure class="memory-card"><img src="memories/memory-3.png" alt="Shreya memory 3"></figure>
+      <figure class="memory-card"><img src="memories/memory-4.png" alt="Shreya memory 4"></figure>
+      <figure class="memory-card"><img src="memories/memory-5.png" alt="Shreya memory 5"></figure>
+      <figure class="memory-card"><img src="memories/memory-6.png" alt="Shreya memory 6"></figure>
+      <figure class="memory-card"><img src="memories/memory-7.png" alt="Shreya memory 7"></figure>
+      <figure class="memory-card"><img src="memories/memory-8.png" alt="Shreya memory 8"></figure>
+    </div>
+  </section>
+
+  <div class="rainbow-bar"></div>
+
+  <!-- ════ SHREYA EXPOSED ════ -->
+  <section id="facts">
+    <section id="exposed">
+      <div class="section-header">
+        <div class="section-badge">💥 Shreya Exposed</div>
+        <h2 class="section-title">Shreya Exposed</h2>
+        <p class="section-sub">Tap a card for the full evidence, Sheruuu 👀</p>
+      </div>
+      <div class="facts-grid">
+        <button type="button" class="fact-card" style="border-top-color:#FF8FAB;" onclick="popup('😴','Lazy Baba™',this.querySelector('.fact-val').textContent)">
+          <span class="fact-icon">😴</span>
+          <span class="fact-title">Lazy Baba™</span>
+          <span class="fact-val">Lazy? 100/100. Madam khud kuch karegi nahi, bas sabko gyaan dene ke lectures degi. 😭</span>
+        </button>
+        <button type="button" class="fact-card" style="border-top-color:#FFD700;" onclick="popup('🥱','Tired for absolutely no reason',this.querySelector('.fact-val').textContent)">
+          <span class="fact-icon">🥱</span>
+          <span class="fact-title">Tiredness: 200/100</span>
+          <span class="fact-val">Tired for absolutely no reason? 200/100. 😭 Resting is basically a full-time job at this point.</span>
+        </button>
+        <button type="button" class="fact-card" style="border-top-color:#87CEEB;" onclick="popup('🧸','Godi Utho Ambassador',this.querySelector('.fact-val').textContent)">
+          <span class="fact-icon">🧸</span>
+          <span class="fact-title">Godi Utho Ambassador</span>
+          <span class="fact-val">Saying “GODI UTHAO” every five minutes? INFINITE/100. 💀 Sheruuu, stand up yourself challenge: impossible.</span>
+        </button>
+        <button type="button" class="fact-card" style="border-top-color:#98F5C4;" onclick="popup('🛵','The Scooty Panda Incident',this.querySelector('.fact-val').textContent)">
+          <span class="fact-icon">🛵</span>
+          <span class="fact-title">The Scooty Panda Incident</span>
+          <span class="fact-val">Aunty said “Thappad maarungi!” after the scooty bump, and somehow I got named Scooty Panda. BEHEN, scooty tu chala rahi thi! 😭💀</span>
+        </button>
+        <button type="button" class="fact-card" style="border-top-color:#C8A8E9;" onclick="popup('🤡','Blame Transfer PhD',this.querySelector('.fact-val').textContent)">
+          <span class="fact-icon">🤡</span>
+          <span class="fact-title">Blame Transfer PhD</span>
+          <span class="fact-val">Driver seat pe khud, takkar bhi khud maari, blame mere upar. Police aayi toh main isko jaanti bhi nahi. 😭✋🏻</span>
+        </button>
+        <button type="button" class="fact-card" style="border-top-color:#FFB085;" onclick="popup('🫂','Favourite Problem',this.querySelector('.fact-val').textContent)">
+          <span class="fact-icon">🫂</span>
+          <span class="fact-title">Favourite Problem</span>
+          <span class="fact-val">Pareshan toh tu bahut karti hai, par tere bina maza bhi nahi aata. Unfortunately, lifetime subscription le li hai maine. 🫂</span>
+        </button>
+      </div>
+    </section>
+    <div class="section-header">
+      <div class="section-badge">🤩 Official Shreya Facts</div>
+      <h2 class="section-title">Certified by Gurnayan™ 😌</h2>
+      <p class="section-sub">(click each card, they react 😛)</p>
+    </div>
+    <div class="facts-grid">
+      <div class="fact-card" style="border-top-color:#FF8FAB;" onclick="popup('🎂','Birthday Queen!','25th October. The day the world got significantly better and didn\'t even fully realise it. Scorpio energy. Fierce, passionate, and a little chaotic. Honestly? Perfect.')">
+        <div class="fact-icon">🎂</div>
+        <div class="fact-title">Birthday</div>
+        <div class="fact-val">25 October 2006 🎉<br/><small style="color:#C8A8E9;font-size:0.85rem;">Best day ever, objectively</small></div>
+      </div>
+      <div class="fact-card" style="border-top-color:#FFD700;" onclick="popup('♏','Scorpio!','SCORPIO. The most intense, loyal, and secretly hilarious zodiac sign. You feel everything deeply, love fiercely, and your stare could intimidate a wall. This is a compliment.')">
+        <div class="fact-icon">♏</div>
+        <div class="fact-title">Star Sign</div>
+        <div class="fact-val">Scorpio<br/><small style="color:#C8A8E9;font-size:0.85rem;">Fierce. Loyal. Iconic.</small></div>
+      </div>
+      <div class="fact-card" style="border-top-color:#87CEEB;" onclick="popup('🌸','Her Superpower!','Making every single person feel seen, heard, and genuinely cared for. She does this without even trying. It\'s infuriating how good she is at it. (Not actually infuriating. I love her.)')">
+        <div class="fact-icon">🌸</div>
+        <div class="fact-title">Superpower</div>
+        <div class="fact-val">Makes everyone feel special<br/><small style="color:#C8A8E9;font-size:0.85rem;">Certified by all who know her</small></div>
+      </div>
+      <div class="fact-card" style="border-top-color:#98F5C4;" onclick="popup('😂','Her Best Trait!','The laugh. THE LAUGH. It\'s the most contagious thing I\'ve ever encountered. Once you hear it you\'re done. You\'re laughing too. It\'s over. Game over. You\'ve been Shreya\'d.')">
+        <div class="fact-icon">😂</div>
+        <div class="fact-title">Signature Move</div>
+        <div class="fact-val">The Legendary Laugh™<br/><small style="color:#C8A8E9;font-size:0.85rem;">100% infectious, zero cure</small></div>
+      </div>
+      <div class="fact-card" style="border-top-color:#C8A8E9;" onclick="popup('🌍','Her Impact!','She lights up every room she enters. Not metaphorically — literally the vibe of the space changes. The room gets warmer. People smile more. That\'s Shreya. That\'s her whole deal.')">
+        <div class="fact-icon">🌍</div>
+        <div class="fact-title">Room Effect</div>
+        <div class="fact-val">Lights up every single one<br/><small style="color:#C8A8E9;font-size:0.85rem;">Scientists confirm: it\'s her</small></div>
+      </div>
+      <div class="fact-card" style="border-top-color:#FFB085;" onclick="popup('🎀','Her Vibe!','Pure sunshine. Wrapped in a cosy blanket. With a warm drink. On a perfect day. That is the energy Shreya Gupta brings into the world. We are all lucky.')">
+        <div class="fact-icon">🎀</div>
+        <div class="fact-title">Overall Vibe</div>
+        <div class="fact-val">☀️ Sunshine Personified<br/><small style="color:#C8A8E9;font-size:0.85rem;">Available 24/7, no subscription</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="personality">
+    <div class="section-header">
+      <div class="section-badge">📋 Official Report</div>
+      <h2 class="section-title">🚨 SHREYA GUPTA: OFFICIAL REPORT 🚨</h2>
+      <p class="section-sub">Happy Birthday to our very own Lazy Baba, the Godi Utho Ambassador! 🎀💗</p>
+    </div>
+    <div class="report-grid">
+      <div class="report-card">
+        <div class="report-top"><span>Lazy?</span><span class="report-score">100/100</span></div>
+        <div class="report-track"><div class="report-fill" style="--score:100%"></div></div>
+        <div class="report-note">Lazy Baba status: confirmed ✅</div>
+      </div>
+      <div class="report-card">
+        <div class="report-top"><span>Tired for no reason?</span><span class="report-score">200/100</span></div>
+        <div class="report-track"><div class="report-fill" style="--score:100%"></div></div>
+        <div class="report-note">Madam exhausted from doing absolutely nothing 😭</div>
+      </div>
+      <div class="report-card">
+        <div class="report-top"><span>“GODI UTHAO” requests</span><span class="report-score">∞/100</span></div>
+        <div class="report-track"><div class="report-fill" style="--score:100%"></div></div>
+        <div class="report-note">Godi Utho Ambassador: lifetime appointment 💀</div>
+      </div>
+      <div class="report-card">
+        <div class="report-top"><span>Blame transfer ability</span><span class="report-score">PhD</span></div>
+        <div class="report-track"><div class="report-fill" style="--score:100%"></div></div>
+        <div class="report-note">Scooty Panda Incident remains Exhibit A 🤡</div>
+      </div>
+      <div class="report-card">
+        <div class="report-top"><span>Bestie material</span><span class="report-score">100/100</span></div>
+        <div class="report-track"><div class="report-fill" style="--score:100%"></div></div>
+        <div class="report-note">Okay fine, 10/10 🫶</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rainbow-bar"></div>
+
+  <!-- ════ LETTER ════ -->
+  <section id="letter">
+    <div class="section-header">
+      <div class="section-badge">💌 A Letter From Gurnayan</div>
+      <h2 class="section-title">Written with my whole heart 💗</h2>
+      <p class="section-sub">(click the paper to put a smile on it ✨)</p>
+    </div>
+    <div class="paper" onclick="paperClick(this)">
+      <div class="paper-lines"></div>
+      <div class="stamp"><div>💌</div><span>With Love</span></div>
+      <div class="letter-date">25 October 2026 🌸</div>
+      <div class="letter-hey">HAPPIEST BIRTHDAYYYYY MERI SHREYUUUU 🎂🎀💗</div>
+      <div class="letter-body">
+        25 October ko duniya ko tu mili thi, aur pata nahi maine kaunsa punya kiya tha jo mujhe tu mil gayi. 😭❤️
+        <br/><br/>
+        Sabse pehle toh happy birthday, pagal aurat. Bhagwan tujhe saari khushiyan de, tere saare dreams poore hon, tujhe life mein sab kuch mile jo tu chahti hai… bas thoda dimaag bhi de de. Uski zaroorat zyada hai. 💀
+        <br/><br/>
+        Jokes apart, thank you meri life ka itna special part hone ke liye. Tere saath hasna, faltu ki baatein karna, ek doosre ko irritate karna aur chhoti-chhoti cheezon ko memories bana dena — these things mean more to me than you probably realise.
+        <br/><br/>
+        I hope tu hamesha aise hi hasti rahe, apni life mein bohot aage jaaye, aur kabhi apni worth bhool ke kisi ke liye khud ko change na kare.
+        <br/><br/>
+        Aur haan, famous ho jaana, successful ho jaana, duniya ghoom lena… par mujhe bhoolne ki galti mat kariyo. Mere paas tere saare embarrassing secrets hain. 😊🔪
+        <br/><br/>
+        Love you loads, Shreya. Aaj ka din tere jitna hi special ho. Happy birthday once again, meri favourite headache. 🎂💗
+      </div>
+      <div class="letter-sign">
+        <p>— Teri</p>
+        <h3>Gurnayan 🫶🏻</h3>
+      </div>
+      <div class="wax">💌</div>
+    </div>
+  </section>
+
+  <div class="rainbow-bar"></div>
+
+  <!-- ════ WISHES ════ -->
+  <section id="wishes">
+    <div class="section-header">
+      <div class="section-badge">🌈 Birthday Wishes!</div>
+      <h2 class="section-title">Click every single one! 👆</h2>
+      <p class="section-sub">(each one has a special message 💕)</p>
+    </div>
+    <div class="wishes-grid">
+      <div class="wish" onclick="popup('💖','Happiness!','May you have so much happiness it becomes slightly suspicious and people start asking questions. \'She\'s too happy, something\'s going on\' — yes, it\'s called having a great life.')">
+        <span class="wish-icon">💖</span><div class="wish-txt">Endless happiness</div>
+      </div>
+      <div class="wish" onclick="popup('✨','Magic!','May life keep surprising you with beautiful unexpected things. The kind that make you go \'wait, really? for ME?\' Yes. Especially for you.')">
+        <span class="wish-icon">✨</span><div class="wish-txt">More magic moments</div>
+      </div>
+      <div class="wish" onclick="popup('🌺','Growth!','May you keep growing into every brilliant version of yourself you\'ve imagined. You\'re already incredible. Future you is going to be UNREAL.')">
+        <span class="wish-icon">🌺</span><div class="wish-txt">Beautiful growth</div>
+      </div>
+      <div class="wish" onclick="popup('🍕','Food!','May you always find the best food, the best spots, and never have a disappointing meal again. You deserve every delicious thing. This is my most sincere wish.')">
+        <span class="wish-icon">🍕</span><div class="wish-txt">Amazing food always</div>
+      </div>
+      <div class="wish" onclick="popup('🌍','Adventures!','May you see beautiful new places and collect the kind of memories that make you smile for years. The world is big and you deserve to explore it.')">
+        <span class="wish-icon">🌍</span><div class="wish-txt">Grand adventures</div>
+      </div>
+      <div class="wish" onclick="popup('😂','Laughter!','May you laugh every single day. The loud, ugly, eyes-watering kind. The kind you can\'t explain to someone who wasn\'t there. The best kind.')">
+        <span class="wish-icon">😂</span><div class="wish-txt">Non-stop laughter</div>
+      </div>
+      <div class="wish" onclick="popup('🌸','Peace!','May you always be able to find your calm — in the chaos, in the quiet, wherever you need it. You deserve to feel settled and safe.')">
+        <span class="wish-icon">🌸</span><div class="wish-txt">Inner peace</div>
+      </div>
+      <div class="wish" onclick="popup('⭐','Dreams!','Every dream you\'ve been holding quietly? May it come true, one piece at a time. You\'ve got this. You really, really do.')">
+        <span class="wish-icon">⭐</span><div class="wish-txt">Dreams come true</div>
+      </div>
+      <div class="wish" onclick="popup('💌','Love!','May you always be surrounded by people who see exactly how wonderful you are and make sure you know it. No guessing. Just love.')">
+        <span class="wish-icon">💌</span><div class="wish-txt">Overflowing love</div>
+      </div>
+      <div class="wish" onclick="popup('🌈','Colour!','May your life stay as vibrant, colourful, and joyful as it looks. You make the world more colourful just by being in it. Don\'t let anyone dim that.')">
+        <span class="wish-icon">🌈</span><div class="wish-txt">A colourful life</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rainbow-bar"></div>
+
+  <section id="open-when">
+    <div class="section-header">
+      <div class="section-badge">🫣 Open when you need a smile</div>
+      <h2 class="section-title">Bestie Emergency Messages 💌</h2>
+      <p class="section-sub">Tap every card, Sheruuu — the last surprise is waiting! 🎀</p>
+    </div>
+    <div class="open-when-grid">
+      <button type="button" class="open-when-card" onclick="openWhenCard('sad')">
+        <strong>Open when you're sad 💗</strong>
+        <span>A bestie-approved reminder for the gloomy days.</span>
+      </button>
+      <button type="button" class="open-when-card" onclick="openWhenCard('miss')">
+        <strong>Open when you miss me 🥹</strong>
+        <span>For when you need your daily dose of Gurnayan.</span>
+      </button>
+      <button type="button" class="open-when-card" onclick="openWhenCard('hard')">
+        <strong>Open when life gets hard 🫂</strong>
+        <span>You don't have to figure everything out alone.</span>
+      </button>
+      <button type="button" class="open-when-card" onclick="openWhenCard('right')">
+        <strong>Open when you think you're always right 💀</strong>
+        <span>A loving public service announcement from your bestie.</span>
+      </button>
+    </div>
+    <p id="open-when-status" class="open-when-status" aria-live="polite">Opened 0 of 4 notes — keep going for your final surprise! 💌</p>
+  </section>
+
+  <div class="rainbow-bar"></div>
+
+  <!-- ════ FINALE ════ -->
+  <section id="finale">
+    <div id="finale-floats" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;"></div>
+    <div id="finale-locked" style="position:relative;z-index:5;">
+      <div style="font-size:3rem;animation:spin 4s linear infinite;display:inline-block;margin-bottom:15px;">🔒</div>
+      <h1 class="finale-title">One last thing…</h1>
+      <p class="finale-msg">Open all four bestie notes first. No skipping, Sheruuu! 👀</p>
+    </div>
+    <div id="finale-content" hidden style="position:relative;z-index:5;">
+      <div style="font-size:3rem;animation:spin 4s linear infinite;display:inline-block;margin-bottom:15px;">🎀</div>
+      <h1 class="finale-title">Happy 20th Birthday,<br/>Shreya Gupta! 🎂🎉</h1>
+      <div class="big-heart" onclick="heartClick(this)">💝</div>
+      <p class="finale-msg">
+        Okay Shreya, last thing. No jokes for the next 30 seconds. 🤍<br/><br/>
+        I know main tujhe bohot irritate karti hoon, roast karti hoon, aur har baat pe mazaak uda deti hoon. But jokes apart, I'm genuinely so glad you're a part of my life.<br/><br/>
+        Life mein sab kuch same nahi rehta. People change, priorities change, situations change. But I hope chahe hum kitne bhi busy ho jaayein, humare paas hamesha ek doosre ke liye time ho.<br/><br/>
+        I hope your twenties bring you the kind of happiness you don't have to pretend to feel, people who genuinely value you, opportunities that excite you, and memories you'll smile about years later.<br/><br/>
+        And wherever life takes us, I hope we'll always have our stupid jokes, random conversations, embarrassing stories, and that one kind of laughter that makes absolutely no sense to anyone else.<br/><br/>
+        Happy 20th birthday, Shreya Gupta. You deserve so much happiness.
+      </p>
+      <div class="finale-from">Love you, pagli. Always your bestie,<br/>Gurnayan Jot Kaur 💗</div>
+      <div class="fun-btns">
+        <button class="fun-btn a" onclick="fireworks()" style="font-size:1.3rem;padding:18px 50px;">🎆 CELEBRATE! 🎆</button>
+        <button class="fun-btn b" onclick="fireConfetti()">🎊 Confetti!</button>
+        <button class="fun-btn c" onclick="stickerRain()">🌈 Stickers!</button>
+      </div>
+      <div style="margin-top:50px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+        <span style="font-size:2rem;animation:floatUp 3s ease-in-out infinite;animation-delay:0s;">🎈</span>
+        <span style="font-size:2rem;animation:floatUp 3s ease-in-out infinite;animation-delay:.3s;">🎉</span>
+        <span style="font-size:2rem;animation:floatUp 3s ease-in-out infinite;animation-delay:.6s;">🎊</span>
+        <span style="font-size:2rem;animation:floatUp 3s ease-in-out infinite;animation-delay:.9s;">🎂</span>
+        <span style="font-size:2rem;animation:floatUp 3s ease-in-out infinite;animation-delay:1.2s;">🌟</span>
+        <span style="font-size:2rem;animation:floatUp 3s ease-in-out infinite;animation-delay:1.5s;">💖</span>
+        <span style="font-size:2rem;animation:floatUp 3s ease-in-out infinite;animation-delay:1.8s;">🌈</span>
+        <span style="font-size:2rem;animation:floatUp 3s ease-in-out infinite;animation-delay:2.1s;">🦋</span>
+        <span style="font-size:2rem;animation:floatUp 3s ease-in-out infinite;animation-delay:2.4s;">🌸</span>
+        <span style="font-size:2rem;animation:floatUp 3s ease-in-out infinite;animation-delay:2.7s;">✨</span>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end #main -->
+
+<!-- ══════════════ JAVASCRIPT ══════════════ -->
+<script>
+/* ── AUDIO CONTEXT for fun pops ── */
+let audioCtx;
+function getAudio(){
+  if(!audioCtx) audioCtx = new (window.AudioContext||window.webkitAudioContext)();
+  return audioCtx;
+}
+function playPop(freq=440,dur=0.12){
+  try{
+    const ctx=getAudio();
+    const o=ctx.createOscillator();
+    const g=ctx.createGain();
+    o.connect(g);g.connect(ctx.destination);
+    o.frequency.setValueAtTime(freq,ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(freq*2,ctx.currentTime+dur);
+    g.gain.setValueAtTime(0.3,ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+dur);
+    o.start(ctx.currentTime);o.stop(ctx.currentTime+dur);
+  }catch(e){}
+}
+function playWoosh(){
+  try{
+    const ctx=getAudio();
+    const o=ctx.createOscillator();
+    const g=ctx.createGain();
+    o.type='sawtooth';
+    o.connect(g);g.connect(ctx.destination);
+    o.frequency.setValueAtTime(300,ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(100,ctx.currentTime+0.3);
+    g.gain.setValueAtTime(0.15,ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.3);
+    o.start();o.stop(ctx.currentTime+0.3);
+  }catch(e){}
+}
+
+/* ════════════ BALLOON GAME ════════════ */
+const BALLOON_COLORS=[
+  ['#FF8FAB','#FF4D94'],['#FFB085','#FF6B3D'],['#FFE566','#FFB800'],
+  ['#87CEEB','#1E88E5'],['#98F5C4','#00C853'],['#C8A8E9','#7B1FA2'],
+  ['#FFAABB','#E91E63'],['#B3E5FC','#0288D1'],['#FFD6A5','#FF8F00'],
+  ['#D0F4DE','#2E7D32']
+];
+const BALLOON_MSGS=['Pop! 💥','BOOM! 🎆','Yay! 🎉','Got it! ✨','POW! 💥','Nice! 🌟'];
+let totalBalloons=0,poppedBalloons=0,score=0;
+let gameActive=true;
+
+function makeBalloon(initY=null){
+  if(!gameActive) return;
+  const arena=document.getElementById('balloon-arena');
+  if(!arena) return;
+  const [c1,c2]=BALLOON_COLORS[Math.floor(Math.random()*BALLOON_COLORS.length)];
+  const size=65+Math.random()*40;
+  const x=6+Math.random()*82;
+  const dur=5+Math.random()*4;
+
+  const b=document.createElement('div');
+  b.className='game-balloon';
+
+  if(initY!==null){
+    b.style.cssText=`
+      left:${x}%;
+      top:${initY}%;
+      width:${size}px;
+      height:${size*1.3}px;
+      animation:balloonBob ${2.5+Math.random()*1.5}s ease-in-out infinite alternate;
+    `;
+  } else {
+    b.style.cssText=`
+      left:${x}%;
+      bottom:-${size+20}px;
+      width:${size}px;
+      height:${size*1.3}px;
+      animation:balloonRise ${dur}s linear infinite;
+    `;
+  }
+
+  // SVG balloon shape
+  b.innerHTML=`<svg viewBox="0 0 100 130" width="${size}" height="${size*1.3}" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="bg${totalBalloons}_${Math.floor(Math.random()*9999)}" cx="35%" cy="35%" r="65%">
+        <stop offset="0%" stop-color="${c1}" stop-opacity="1"/>
+        <stop offset="100%" stop-color="${c2}" stop-opacity="1"/>
+      </radialGradient>
+    </defs>
+    <ellipse cx="50" cy="52" rx="46" ry="50" fill="${c1}"/>
+    <ellipse cx="35" cy="38" rx="12" ry="10" fill="rgba(255,255,255,0.4)"/>
+    <path d="M50 102 Q48 108 50 115 Q52 108 50 102Z" fill="${c2}"/>
+    <line x1="50" y1="115" x2="50" y2="130" stroke="${c2}" stroke-width="1.5" stroke-dasharray="3,2"/>
+  </svg>`;
+
+  // Random emoji label
+  const emojis=['🎀','✨','💖','🌸','⭐','🎊','💫','🎂','🥳','👑'];
+  const label=document.createElement('div');
+  label.style.cssText=`position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);font-size:${size*0.3}px;pointer-events:none;`;
+  label.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+  b.appendChild(label);
+
+  const doPop=(e)=>{
+    e.preventDefault();
+    e.stopPropagation();
+    const rect=b.getBoundingClientRect();
+    const cx=(e.clientX&&e.clientX>0)?e.clientX:(rect.left+rect.width/2);
+    const cy=(e.clientY&&e.clientY>0)?e.clientY:(rect.top+rect.height/2);
+    popBalloon(b,cx,cy);
+  };
+  b.addEventListener('pointerdown',doPop);
+  b.addEventListener('click',doPop);
+
+  arena.appendChild(b);
+  totalBalloons++;
+  const tc=document.getElementById('total-count');
+  if(tc) tc.textContent=totalBalloons;
+  return b;
+}
+
+function popBalloon(b,cx,cy){
+  if(b.classList.contains('popping')) return;
+  b.classList.add('popping');
+
+  // Play a small pop sound.
+  playPop(350+Math.random()*400);
+
+  poppedBalloons++;
+  score+=10;
+  const pc=document.getElementById('popped-count');
+  if(pc) pc.textContent=poppedBalloons;
+  const sc=document.getElementById('score-pts');
+  if(sc) sc.textContent=score;
+
+  // Burst emoji
+  const msg=BALLOON_MSGS[Math.floor(Math.random()*BALLOON_MSGS.length)];
+  const burst=document.createElement('div');
+  burst.className='pop-burst';
+  burst.textContent=msg;
+  burst.style.cssText=`left:${cx-30}px;top:${cy-30}px;font-size:1.5rem;font-family:'Fredoka One',cursive;color:#FF4D94;z-index:99999;`;
+  document.body.appendChild(burst);
+  setTimeout(()=>burst.remove(),550);
+
+  // Star sparkles
+  for(let i=0;i<8;i++){
+    const s=document.createElement('div');
+    s.className='star-burst';
+    s.textContent=['⭐','✨','💥','🌟','💫','🎉'][Math.floor(Math.random()*6)];
+    const angle=(Math.PI*2/8)*i;
+    const dist=45+Math.random()*35;
+    s.style.cssText=`
+      left:${cx+Math.cos(angle)*dist-12}px;
+      top:${cy+Math.sin(angle)*dist-12}px;
+      font-size:${18+Math.random()*14}px;
+      z-index:99999;
+    `;
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),650);
+  }
+
+  setTimeout(()=>{
+    b.remove();
+    checkAllPopped();
+  },280);
+}
+
+function checkAllPopped(){
+  // Show enter button after popping at least 5
+  if(poppedBalloons>=5){
+    const btn=document.getElementById('enter-btn');
+    if(btn){
+      btn.style.display='block';
+      btn.style.animation='bounceIn 0.6s cubic-bezier(.34,1.56,.64,1) forwards';
+    }
+  }
+}
+
+function spawnBalloons(){
+  // 1. Initial balloons already visible in arena
+  const initialY=[15,28,40,55,68,22,35,48,62,75,18,50,32,70];
+  initialY.forEach((y,idx)=>{
+    setTimeout(()=>makeBalloon(y),idx*90);
+  });
+
+  // 2. Rising balloons continuously
+  setInterval(()=>{
+    if(gameActive && document.querySelectorAll('.game-balloon').length<22){
+      makeBalloon();
+    }
+  },1800);
+
+  // Show score bar
+  setTimeout(()=>{
+    const sw=document.getElementById('score-wrap');
+    if(sw) sw.classList.add('show');
+  },400);
+}
+
+function enterSite(){
+  try{ playWoosh(); }catch(e){}
+  gameActive=false;
+  const intro=document.getElementById('intro');
+  if(intro){
+    intro.classList.add('bye');
+    intro.style.display='none';
+  }
+  const main=document.getElementById('main');
+  if(main){
+    main.style.display='block';
+    main.style.opacity='1';
+    main.classList.add('show');
+  }
+  window.scrollTo({top:0, behavior:'smooth'});
+  initMain();
+  mpPlayBirthdayTrack();
+  try{ fireConfetti(); }catch(e){}
+  setTimeout(()=>{ try{ fireworks(3000); }catch(e){} },300);
+}
+
+/* ════════════ MAIN INIT ════════════ */
+function initMain(){
+  updateAge();
+  updateBirthdayCountdown();
+  if(!birthdayCountdownTimer) birthdayCountdownTimer=setInterval(updateBirthdayCountdown,1000);
+  startQuotes();
+  createHeroBgFloats();
+  createFinaleFloats();
+}
+
+/* ── AGE COUNTER ── */
+function updateAge(){
+  const bday=new Date(2006,9,25);
+  const now=new Date();
+  let age=now.getFullYear()-bday.getFullYear();
+  if(now.getMonth()<bday.getMonth()||(now.getMonth()===bday.getMonth()&&now.getDate()<bday.getDate())) age--;
+  const ms=now-bday;
+  const days=Math.floor(ms/(1000*60*60*24));
+  const hours=Math.floor((ms%(1000*60*60*24))/(1000*60*60));
+  const mins=Math.floor((ms%(1000*60*60))/(1000*60));
+  countUp('c-years',age);
+  countUp('c-days',days);
+  countUp('c-hours',hours);
+  countUp('c-mins',mins);
+}
+let birthdayCountdownTimer=null;
+function updateBirthdayCountdown(){
+  const el=document.getElementById('birthday-countdown');
+  if(!el) return;
+  const target=new Date(2026,9,25);
+  const now=new Date();
+  const remaining=target-now;
+  if(remaining<=0){
+    el.textContent=now.toDateString()===target.toDateString()
+      ?'Aaj tera 20th birthday hai, birthday queen! 🎉'
+      :'20 looks good on you, Sheruuu! Happy birthday! 🎂';
+    return;
+  }
+  const days=Math.floor(remaining/86400000);
+  const hours=Math.floor((remaining%86400000)/3600000);
+  const minutes=Math.floor((remaining%3600000)/60000);
+  const seconds=Math.floor((remaining%60000)/1000);
+  el.textContent=`Birthday countdown: ${days}d ${hours}h ${minutes}m ${seconds}s 🎂`;
+}
+function countUp(id,target){
+  const el=document.getElementById(id);
+  if(!el) return;
+  let n=0;
+  const step=Math.max(1,Math.floor(target/60));
+  const iv=setInterval(()=>{
+    n=Math.min(n+step,target);
+    el.textContent=n.toLocaleString();
+    if(n>=target) clearInterval(iv);
+  },30);
+}
+function ageClick(el,type){
+  el.style.animation='jellyPop 0.3s forwards';
+  playPop(500+Math.random()*300);
+  spawnFloatie(el,['🎉','⭐','💥','🌟','✨'][Math.floor(Math.random()*5)]);
+  setTimeout(()=>el.style.animation='',400);
+  const msgs={
+    years:'20 years of being absolutely incredible! 🎂',
+    days:'That\'s '+document.getElementById('c-days').textContent+' days of Shreya magic! ✨',
+    hours:'Every single hour has been iconic! ⭐',
+    mins:'Literally every minute you exist is a blessing! 💖'
+  };
+  showTooltip(el,msgs[type]||'WOW! 🎉');
+}
+
+let heartChallengeCount=0,heartChallengeActive=false,heartChallengeTimer=null;
+function tapHeartChallenge(){
+  const button=document.getElementById('heart-challenge-button');
+  const status=document.getElementById('heart-challenge-status');
+  if(!heartChallengeActive){
+    heartChallengeCount=0;
+    heartChallengeActive=true;
+    const deadline=Date.now()+15000;
+    button.textContent='💖 TAP! 0/20';
+    status.textContent='Go go go! Tap this button 20 times! ⏱️ 15s';
+    clearInterval(heartChallengeTimer);
+    heartChallengeTimer=setInterval(()=>{
+      const seconds=Math.max(0,Math.ceil((deadline-Date.now())/1000));
+      if(seconds===0){
+        clearInterval(heartChallengeTimer);
+        heartChallengeActive=false;
+        button.textContent='Try again! 💪';
+        status.textContent=`Time! You got ${heartChallengeCount}/20 hearts. One more try, Sheruuu? 😤`;
+      }else{
+        status.textContent=`${20-heartChallengeCount} more hearts! ${seconds} seconds left! 💖`;
+      }
+    },200);
+    return;
+  }
+  heartChallengeCount++;
+  button.textContent=`💖 TAP! ${heartChallengeCount}/20`;
+  playPop(450+heartChallengeCount*12,0.06);
+  if(heartChallengeCount>=20){
+    clearInterval(heartChallengeTimer);
+    heartChallengeActive=false;
+    button.textContent='Play again! 🎉';
+    status.textContent='20 hearts caught! Fast fingers, birthday queen! 🏆💗';
+    fireConfetti();
+  }
+}
+function answerBestieQuiz(button,isCorrect){
+  const options=document.querySelectorAll('.quiz-option');
+  if([...options].some(option=>option.disabled)) return;
+  options.forEach(option=>{option.disabled=true;});
+  button.style.borderColor=isCorrect?'#55B889':'#FF6B9D';
+  button.style.background=isCorrect?'#E9FFF3':'#FFF0F5';
+  document.getElementById('bestie-quiz-status').textContent=isCorrect
+    ?'Correct! Gurnayan got blamed as Scooty Panda. Justice for the passenger! 🐼🏆'
+    :'Wrong! It was Gurnayan who got blamed as Scooty Panda. Shreya was driving! 😭';
+  if(isCorrect) fireConfetti();
+}
+let birthdayWishCount=0;
+function launchBirthdayWish(event){
+  event.preventDefault();
+  if(birthdayWishCount>=3){
+    document.getElementById('birthday-wish-status').textContent='Three wishes launched! The birthday universe is already working overtime. ✨';
+    return;
+  }
+  const input=document.getElementById('birthday-wish-input');
+  const text=input.value.trim();
+  if(!text) return;
+  const note=document.createElement('div');
+  note.className='wish-note';
+  note.textContent=`🌟 ${text}`;
+  document.getElementById('birthday-wish-wall').prepend(note);
+  birthdayWishCount++;
+  input.value='';
+  document.getElementById('birthday-wish-status').textContent=
+    birthdayWishCount===3?'Three wishes launched! The birthday universe is listening. 💫':'Wish launched! Add up to 2 more if you like. 🚀';
+  playPop(700,0.12);
+}
+
+/* ── TOOLTIP ── */
+let tooltipTimer;
+function showTooltip(el,text){
+  const t=document.getElementById('tooltip');
+  const r=el.getBoundingClientRect();
+  t.textContent=text;
+  t.style.left=(r.left+r.width/2-t.offsetWidth/2)+'px';
+  t.style.top=(r.top-45)+'px';
+  t.style.opacity='1';
+  clearTimeout(tooltipTimer);
+  tooltipTimer=setTimeout(()=>t.style.opacity='0',2500);
+}
+
+/* ── FLOATIE ── */
+function spawnFloatie(el,emoji){
+  const r=el.getBoundingClientRect();
+  const f=document.createElement('div');
+  f.className='floatie';
+  f.textContent=emoji;
+  f.style.cssText=`left:${r.left+r.width/2-12}px;top:${r.top-5}px;`;
+  document.body.appendChild(f);
+  setTimeout(()=>f.remove(),2500);
+}
+
+/* ── HERO BACKGROUND FLOATS ── */
+function createHeroBgFloats(){
+  const c=document.getElementById('hero-bg-floats');
+  const items=['🌸','✨','💖','🎀','⭐','🦋','🌟','💫','🎊','🌈','🎈','🍀'];
+  for(let i=0;i<18;i++){
+    const d=document.createElement('div');
+    d.style.cssText=`
+      position:absolute;
+      left:${Math.random()*100}%;top:${Math.random()*100}%;
+      font-size:${16+Math.random()*20}px;
+      animation:floatUp ${3+Math.random()*4}s ease-in-out ${Math.random()*4}s infinite;
+      opacity:0.5;
+    `;
+    d.textContent=items[Math.floor(Math.random()*items.length)];
+    c.appendChild(d);
+  }
+}
+function createFinaleFloats(){
+  const c=document.getElementById('finale-floats');
+  const items=['🎈','🎉','🎊','🌟','💖','✨','🌸','🎀','⭐','🦋'];
+  for(let i=0;i<20;i++){
+    const d=document.createElement('div');
+    d.style.cssText=`
+      position:absolute;
+      left:${Math.random()*100}%;top:${Math.random()*100}%;
+      font-size:${20+Math.random()*24}px;
+      animation:floatUp ${3+Math.random()*5}s ease-in-out ${Math.random()*5}s infinite;
+      opacity:0.6;
+    `;
+    d.textContent=items[Math.floor(Math.random()*items.length)];
+    c.appendChild(d);
+  }
+}
+
+/* ── INTERACTIVE TITLE ── */
+let titleClickCount=0;
+const titleReactions=['🎉 Yay! 🎉','Wait, you touched me? 😳','Okay okay, I see you 👀','SHREYA!!!!! 🥳','Best. Birthday. Ever. 💗','Gurnayan made this with love! 💝','Click me again, I dare you 😈','OKAY WOW you really love clicking 😂','Last one I promise 🙈'];
+function titleClick(el){
+  const msg=titleReactions[titleClickCount%titleReactions.length];
+  titleClickCount++;
+  el.style.animation='shake 0.4s ease';
+  playPop(600+titleClickCount*50);
+  setTimeout(()=>el.style.animation='shimmer 3s linear infinite',450);
+  // drop stickers
+  for(let i=0;i<6;i++){
+    const r=el.getBoundingClientRect();
+    const s=document.createElement('div');
+    s.className='floatie';
+    s.textContent=['🎉','⭐','💖','🎀','💥','✨'][i];
+    s.style.cssText=`left:${r.left+Math.random()*r.width}px;top:${r.top}px;font-size:24px;`;
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),2500);
+  }
+  showTooltip(el,msg);
+}
+
+/* ── CANDLES ── */
+let blownOut=new Set();
+let candleMicStream=null,candleMicSource=null,candleMicAnalyser=null,candleMicFrame=null;
+let candleMicSamples=null,candleNoiseFloor=0.01,candleBlowFrames=0,candleLastBlow=0;
+function blowCandle(e,idx){
+  if(e) e.stopPropagation();
+  extinguishCandle(idx);
+}
+function extinguishNextCandle(){
+  for(let idx=0;idx<5;idx++){
+    if(!blownOut.has(idx)){
+      extinguishCandle(idx);
+      return true;
+    }
+  }
+  return false;
+}
+function extinguishCandle(idx){
+  const c=document.getElementById(`candle-${idx}`);
+  if(!c||blownOut.has(idx)) return;
+  blownOut.add(idx);
+  c.classList.add('blown');
+  playWoosh();
+  spawnFloatie(c,'💨');
+  const msgs=['Ooh, that one\'s out! 💨','Puff! 😤','Gone! 🌬️','Blow harder! Oh wait 😂','One more? 🕯️'];
+  const status=document.getElementById('cake-clicks');
+  status.textContent=msgs[Math.floor(Math.random()*msgs.length)];
+
+  if(blownOut.size===5){
+    stopCandleMicrophone();
+    setTimeout(()=>{
+      status.textContent='🎂 ALL blown out!! Make a wish! 🌟';
+      popup('🌟','Make a Wish!','You blew out all 5 candles! Now close your eyes and make the most wonderful birthday wish, Shreya. Whatever you wish for — you deserve it and more. 💖🎀');
+      fireConfetti();
+    },400);
+  }else if(candleMicStream){
+    status.textContent=`Blow detected! ${5-blownOut.size} candle${blownOut.size===4?'':'s'} left — give another puff! 💨`;
+  }
+}
+function cakeClick(){
+  if(blownOut.size===5) return;
+  const leftCandles=5-blownOut.size;
+  document.getElementById('cake-clicks').textContent=`${leftCandles} candle${leftCandles!==1?'s':''} left — blow into the mic or tap each flame! 🕯️`;
+}
+async function toggleCandleMicrophone(){
+  if(candleMicStream){
+    stopCandleMicrophone();
+    document.getElementById('mic-status').textContent='Microphone is off. You can still tap the candle flames.';
+    return;
+  }
+  const status=document.getElementById('mic-status');
+  const button=document.getElementById('mic-button');
+  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){
+    status.textContent='Microphone access needs Safari permission and a secure page. Tap the candle flames instead.';
+    return;
+  }
+  button.disabled=true;
+  status.textContent='Requesting microphone permission…';
+  try{
+    candleMicStream=await navigator.mediaDevices.getUserMedia({audio:true});
+    const AudioContextClass=window.AudioContext||window.webkitAudioContext;
+    if(!AudioContextClass) throw new Error('Web Audio is not supported in this browser.');
+    if(!audioCtx) audioCtx=new AudioContextClass();
+    if(audioCtx.state==='suspended') await audioCtx.resume();
+    candleMicSource=audioCtx.createMediaStreamSource(candleMicStream);
+    candleMicAnalyser=audioCtx.createAnalyser();
+    candleMicAnalyser.fftSize=2048;
+    candleMicAnalyser.smoothingTimeConstant=0;
+    candleMicSamples=new Float32Array(candleMicAnalyser.fftSize);
+    candleNoiseFloor=0.01;
+    candleMicSource.connect(candleMicAnalyser);
+    button.textContent='🎙️ Turn microphone off';
+    status.textContent='Microphone is on. Blow toward it to extinguish the next candle, or tap a flame.';
+    detectCandleBlows();
+  }catch(error){
+    stopCandleMicrophone();
+    const message=error.name==='NotAllowedError'||error.name==='PermissionDeniedError'
+      ?'Microphone permission was denied. Allow it in Safari settings, or tap the candles instead.'
+      :error.name==='NotFoundError'
+        ?'No microphone was found. Connect one or tap the candles instead.'
+        :`Could not start the microphone: ${error.message||error}. You can tap the candles instead.`;
+    status.textContent=message;
+    console.error('Could not enable the candle microphone:',error);
+  }finally{
+    button.disabled=false;
+  }
+}
+function detectCandleBlows(){
+  if(!candleMicAnalyser||!candleMicSamples) return;
+  candleMicAnalyser.getFloatTimeDomainData(candleMicSamples);
+  let sum=0;
+  for(let i=0;i<candleMicSamples.length;i++) sum+=candleMicSamples[i]*candleMicSamples[i];
+  const level=Math.sqrt(sum/candleMicSamples.length);
+  const threshold=Math.max(0.055,candleNoiseFloor*2.8);
+  if(level>threshold&&level-candleNoiseFloor>0.035){
+    candleBlowFrames++;
+    if(candleBlowFrames>=4&&Date.now()-candleLastBlow>900){
+      candleBlowFrames=0;
+      candleLastBlow=Date.now();
+      extinguishNextCandle();
+    }
+  }else{
+    candleBlowFrames=0;
+    candleNoiseFloor=candleNoiseFloor*0.96+level*0.04;
+  }
+  if(candleMicStream) candleMicFrame=requestAnimationFrame(detectCandleBlows);
+}
+function stopCandleMicrophone(){
+  if(candleMicFrame!==null) cancelAnimationFrame(candleMicFrame);
+  candleMicFrame=null;
+  if(candleMicSource){
+    candleMicSource.disconnect();
+    candleMicSource=null;
+  }
+  if(candleMicStream) candleMicStream.getTracks().forEach(track=>track.stop());
+  candleMicStream=null;
+  candleMicAnalyser=null;
+  candleMicSamples=null;
+  const button=document.getElementById('mic-button');
+  if(button){
+    button.textContent='🎙️ Enable microphone to blow candles';
+    button.disabled=false;
+  }
+  const status=document.getElementById('mic-status');
+  if(status) status.textContent='Microphone is off. You can still tap the candle flames.';
+}
+window.addEventListener('pagehide',stopCandleMicrophone);
+
+/* ── POPUP ── */
+function popup(emoji,title,text){
+  document.getElementById('p-emoji').textContent=emoji;
+  document.getElementById('p-title').textContent=title;
+  document.getElementById('p-text').textContent=text;
+  document.getElementById('popup').classList.add('on');
+  playPop(800,0.2);
+}
+function closePopup(){
+  document.getElementById('popup').classList.remove('on');
+}
+document.getElementById('popup').addEventListener('click',function(e){if(e.target===this)closePopup();});
+
+const openWhenMessages={
+  sad:['💗','Open when you’re sad','Oye pagal, rona band kar. Teri life ki problems solve karne ka contract maine sign nahi kiya tha, but unfortunately ab karna padega. Call kar mujhe. ❤️'],
+  miss:['🥹','Open when you miss me','Miss toh karegi hi. Itni iconic personality roz thodi milti hai. Screenshot le aur meri photo dekh ke kaam chala. 😌'],
+  hard:['🫂','Open when life gets hard','Ek baat yaad rakh: tu akeli nahi hai. Aur agar kisi ne tujhe pareshan kiya na, pehle mujhe batana. Gossip bhi karenge aur solution bhi nikaalenge. 😭🫂'],
+  right:['💀','Open when you think you’re always right','Shreya beta, confidence aur galat hone ke beech mein ek patli si line hoti hai. Tu us line ko roz cross karti hai. 💀']
+};
+const openedWhenMessages=new Set();
+function openWhenCard(key){
+  const message=openWhenMessages[key];
+  if(!message) return;
+  openedWhenMessages.add(key);
+  popup(message[0],message[1],message[2]);
+  const status=document.getElementById('open-when-status');
+  status.textContent=`Opened ${openedWhenMessages.size} of 4 notes${openedWhenMessages.size===4?' — surprise unlocked! 💗':' — keep going for your final surprise! 💌'}`;
+  if(openedWhenMessages.size===Object.keys(openWhenMessages).length){
+    document.getElementById('finale-locked').hidden=true;
+    document.getElementById('finale-content').hidden=false;
+    fireworks(2500);
+  }
+}
+
+/* ── PAPER ── */
+let paperClicks=0;
+const paperReactions=['🌸','💖','✨','🎀','⭐','😍','💕','🌟'];
+function paperClick(el){
+  paperClicks++;
+  playPop(400+paperClicks*30);
+  const e=document.createElement('div');
+  e.className='floatie';
+  e.textContent=paperReactions[paperClicks%paperReactions.length];
+  const r=el.getBoundingClientRect();
+  e.style.cssText=`left:${r.left+Math.random()*r.width}px;top:${r.top+Math.random()*r.height/2}px;font-size:28px;`;
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),2500);
+  el.style.animation='wiggle 0.4s ease';
+  setTimeout(()=>el.style.animation='',500);
+}
+
+/* ── HEART ── */
+function heartClick(el){
+  el.style.animation='jellyPop 0.3s forwards';
+  setTimeout(()=>el.style.animation='heartBeat 1.2s ease-in-out infinite',400);
+  playPop(700,0.25);
+  for(let i=0;i<10;i++){
+    const r=el.getBoundingClientRect();
+    const f=document.createElement('div');
+    f.className='floatie';
+    f.textContent=['💖','💗','💕','💝','💘'][Math.floor(Math.random()*5)];
+    f.style.cssText=`
+      left:${r.left+r.width/2+Math.cos(i/10*Math.PI*2)*60}px;
+      top:${r.top+r.height/2+Math.sin(i/10*Math.PI*2)*60}px;
+      font-size:${18+Math.random()*14}px;
+    `;
+    document.body.appendChild(f);
+    setTimeout(()=>f.remove(),2500);
+  }
+}
+
+/* ── QUOTES ── */
+let qIdx=0,qTimer;
+function startQuotes(){
+  const slides=document.querySelectorAll('.qslide');
+  const dc=document.getElementById('qdots');
+  slides.forEach((_,i)=>{
+    const d=document.createElement('div');
+    d.className='qdot'+(i===0?' on':'');
+    d.onclick=()=>goQ(i);
+    dc.appendChild(d);
+  });
+  qTimer=setInterval(()=>goQ((qIdx+1)%slides.length),4500);
+}
+function goQ(i){
+  const slides=document.querySelectorAll('.qslide');
+  const dots=document.querySelectorAll('.qdot');
+  slides[qIdx].classList.remove('on');
+  dots[qIdx].classList.remove('on');
+  qIdx=i;
+  slides[qIdx].classList.add('on');
+  dots[qIdx].classList.add('on');
+}
+
+/* ── CONFETTI ── */
+const CONF_COLORS=['#FF8FAB','#FFB085','#FFE566','#87CEEB','#98F5C4','#C8A8E9','#FF6B9D','#FFD700','#FF7B6B'];
+function fireConfetti(){
+  playPop(600,0.15);
+  for(let i=0;i<80;i++){
+    setTimeout(()=>spawnConf(),i*25);
+  }
+}
+function spawnConf(){
+  const c=document.createElement('div');
+  c.className='conf';
+  const shapes=['50%','0','50% 0','0 50%'];
+  const drift=(Math.random()-0.5)*200;
+  c.style.cssText=`
+    left:${Math.random()*100}%;
+    width:${7+Math.random()*9}px;height:${7+Math.random()*9}px;
+    background:${CONF_COLORS[Math.floor(Math.random()*CONF_COLORS.length)]};
+    border-radius:${shapes[Math.floor(Math.random()*shapes.length)]};
+    animation-duration:${2.5+Math.random()*3}s;
+    animation-delay:${Math.random()*0.5}s;
+    --drift:${drift}px;
+  `;
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),6000);
+}
+
+/* ── STICKER RAIN ── */
+const STICKERS=['🌸','💖','🎀','⭐','✨','🎉','🌟','💫','🌈','🦋','🍀','🎊','💝','🌺','🎈'];
+function stickerRain(){
+  playPop(400,0.2);
+  for(let i=0;i<30;i++){
+    setTimeout(()=>{
+      const s=document.createElement('div');
+      s.className='sticker-rain';
+      s.textContent=STICKERS[Math.floor(Math.random()*STICKERS.length)];
+      const drift=(Math.random()-0.5)*300;
+      s.style.cssText=`
+        left:${Math.random()*100}%;
+        font-size:${22+Math.random()*22}px;
+        animation-duration:${2+Math.random()*2}s;
+        --drift:${drift}px;
+      `;
+      document.body.appendChild(s);
+      setTimeout(()=>s.remove(),4500);
+    },i*100);
+  }
+}
+
+/* ── FIREWORKS ── */
+function fireworks(dur){
+  const canvas=document.getElementById('fw');
+  canvas.style.display='block';
+  canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+  const ctx=canvas.getContext('2d');
+  const parts=[];
+  const FW_COLORS=['#FF8FAB','#FFD700','#87CEEB','#98F5C4','#C8A8E9','#FF6B9D','#FFB085','#FFFFFF','#FF4D94'];
+
+  function burst(x,y){
+    const col=FW_COLORS[Math.floor(Math.random()*FW_COLORS.length)];
+    const col2=FW_COLORS[Math.floor(Math.random()*FW_COLORS.length)];
+    for(let i=0;i<90;i++){
+      const ang=(Math.PI*2/90)*i;
+      const spd=2+Math.random()*5;
+      parts.push({
+        x,y,vx:Math.cos(ang)*spd,vy:Math.sin(ang)*spd,
+        alpha:1,color:i%2===0?col:col2,
+        size:2+Math.random()*3,decay:0.012+Math.random()*0.018
+      });
+    }
+    playPop(300+Math.random()*300,0.2);
+  }
+
+  let bi=setInterval(()=>burst(
+    80+Math.random()*(canvas.width-160),
+    60+Math.random()*(canvas.height*0.6)
+  ),280);
+
+  function draw(){
+    ctx.fillStyle='rgba(255,240,250,0.18)';
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+    for(let i=parts.length-1;i>=0;i--){
+      const p=parts[i];
+      p.x+=p.vx;p.y+=p.vy;p.vy+=0.07;p.vx*=0.99;p.alpha-=p.decay;
+      if(p.alpha<=0){parts.splice(i,1);continue;}
+      ctx.save();ctx.globalAlpha=p.alpha;
+      ctx.fillStyle=p.color;ctx.shadowColor=p.color;ctx.shadowBlur=8;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fill();
+      ctx.restore();
+    }
+    af=requestAnimationFrame(draw);
+  }
+  let af=requestAnimationFrame(draw);
+  setTimeout(()=>{
+    clearInterval(bi);
+    setTimeout(()=>{
+      cancelAnimationFrame(af);
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      canvas.style.display='none';
+    },2000);
+  },dur||4000);
+}
+
+/* ── SCROLL ── */
+window.addEventListener('scroll',()=>{
+  const st=window.scrollY;
+  const dh=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('pbar').style.transform=`scaleX(${st/dh})`;
+  const bt=document.getElementById('btop');
+  st>400?bt.classList.add('show'):bt.classList.remove('show');
+});
+
+/* ── RESIZE ── */
+window.addEventListener('resize',()=>{
+  const c=document.getElementById('fw');
+  c.width=window.innerWidth;c.height=window.innerHeight;
+});
+
+/* ════════════ INIT ════════════ */
+if(document.readyState==='loading'){
+  window.addEventListener('DOMContentLoaded', spawnBalloons);
+} else {
+  spawnBalloons();
+}
+</script>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--                  🎵 MUSIC PLAYER WIDGET                  -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<style>
+#music-player{
+  position:fixed;bottom:90px;left:20px;z-index:8000;width:318px;
+  background:rgba(255,255,255,0.93);backdrop-filter:blur(22px);
+  border-radius:28px;padding:18px 20px 16px;
+  box-shadow:0 12px 50px rgba(255,107,157,0.35),0 2px 12px rgba(0,0,0,0.08);
+  border:2px solid rgba(255,180,220,0.5);cursor:grab;user-select:none;
+  animation:slideInMp 0.8s cubic-bezier(.34,1.56,.64,1) 1.5s both;
+}
+@keyframes slideInMp{0%{transform:translateX(-160%) rotate(-8deg);opacity:0;}100%{transform:translateX(0) rotate(0);opacity:1;}}
+#music-player:active{cursor:grabbing;}
+#music-player.mp-min{width:64px;height:64px;border-radius:50%;overflow:hidden;padding:0;cursor:pointer;bottom:90px;left:20px;}
+#music-player.mp-min #mp-body{display:none;}
+#music-player.mp-min #mp-mini{display:flex!important;}
+#mp-mini{display:none;width:64px;height:64px;align-items:center;justify-content:center;font-size:2rem;
+  background:linear-gradient(135deg,#FF6B9D,#FFD700,#87CEEB);animation:diskSpin 3s linear infinite;}
+@keyframes diskSpin{to{transform:rotate(360deg);}}
+.mp-art{width:58px;height:58px;border-radius:50%;
+  background:linear-gradient(135deg,#FF6B9D,#FFD700,#87CEEB,#98F5C4);background-size:300%;
+  animation:rainbowBg 2s linear infinite,diskSpin 3s linear infinite;
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0;
+  box-shadow:0 4px 18px rgba(255,107,157,0.4);}
+.mp-art.paused{animation:rainbowBg 4s linear infinite;}
+.mp-top{display:flex;gap:12px;align-items:center;margin-bottom:12px;}
+.mp-info{flex:1;overflow:hidden;}
+.mp-name{font-family:'Fredoka One',cursive;font-size:0.86rem;color:#FF4D94;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  animation:mpMarquee 12s linear infinite;}
+@keyframes mpMarquee{0%,15%{transform:translateX(0);}85%,100%{transform:translateX(-35%);}}
+.mp-artist{font-family:'Boogaloo',cursive;font-size:0.74rem;color:#B090C0;margin-top:2px;}
+.mp-minbtn{background:none;border:none;font-size:1rem;cursor:pointer;color:#CCC;transition:color 0.2s;flex-shrink:0;padding:4px;}
+.mp-minbtn:hover{color:#FF6B9D;}
+.mp-vis{display:flex;align-items:flex-end;gap:3px;height:33px;margin-bottom:10px;justify-content:center;}
+.mp-bar{width:6px;border-radius:3px 3px 0 0;background:linear-gradient(to top,#FF6B9D,#FFD700);min-height:4px;transition:height 0.07s ease;}
+.mp-lyrics{background:linear-gradient(135deg,#FFE8F5,#FFF5D6);border-radius:14px;padding:8px 13px;
+  font-family:'Dancing Script',cursive;font-size:0.96rem;color:#A040A0;text-align:center;
+  margin-bottom:10px;min-height:42px;display:flex;align-items:center;justify-content:center;
+  line-height:1.4;border:1.5px solid rgba(255,150,200,0.3);transition:opacity 0.3s,transform 0.3s;}
+.mp-prog-row{display:flex;align-items:center;gap:8px;margin-bottom:11px;}
+.mp-prog-bar{flex:1;height:6px;background:#FFE4EE;border-radius:10px;overflow:hidden;cursor:pointer;}
+.mp-prog-fill{height:100%;background:linear-gradient(90deg,#FF6B9D,#FFD700,#98F5C4);background-size:200%;
+  animation:rainbowBg 2s linear infinite;border-radius:10px;width:0%;transition:width 0.4s linear;}
+.mp-time{font-family:'Boogaloo',cursive;font-size:0.7rem;color:#C090C0;white-space:nowrap;}
+.mp-controls{display:flex;align-items:center;justify-content:center;gap:11px;margin-bottom:9px;}
+.mp-ctrl{background:none;border:none;cursor:pointer;font-size:1.25rem;transition:transform 0.2s;line-height:1;}
+.mp-ctrl:hover{transform:scale(1.3) rotate(-5deg);}
+.mp-pp{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#FF6B9D,#FFD700);
+  border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.35rem;color:white;
+  box-shadow:0 6px 20px rgba(255,107,157,0.45);transition:transform 0.2s cubic-bezier(.34,1.56,.64,1);}
+.mp-pp:hover{transform:scale(1.15);} .mp-pp:active{transform:scale(0.9);}
+.mp-vol{display:flex;align-items:center;gap:7px;}
+.mp-vol span{font-size:0.88rem;}
+.mp-vol-sl{flex:1;-webkit-appearance:none;appearance:none;height:5px;border-radius:10px;
+  background:linear-gradient(90deg,#FF6B9D,#FFD700);outline:none;cursor:pointer;}
+.mp-vol-sl::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:15px;height:15px;
+  border-radius:50%;background:#FF6B9D;cursor:pointer;box-shadow:0 2px 8px rgba(255,107,157,0.4);}
+.mp-note{position:fixed;pointer-events:none;z-index:9998;font-size:22px;animation:mpNote 2s ease-out forwards;}
+@keyframes mpNote{0%{opacity:1;transform:translateY(0) rotate(0deg);}100%{opacity:0;transform:translateY(-170px) rotate(50deg) scale(1.3);}}
+.mp-toast{position:fixed;top:75px;left:50%;transform:translateX(-50%) translateY(-20px);
+  background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-radius:50px;padding:9px 22px;
+  font-family:'Fredoka One',cursive;font-size:0.92rem;color:#FF4D94;
+  box-shadow:0 6px 25px rgba(255,107,157,0.3);border:2px solid rgba(255,180,220,0.4);
+  z-index:9000;opacity:0;transition:opacity 0.3s,transform 0.3s;pointer-events:none;white-space:nowrap;}
+.mp-toast.on{opacity:1;transform:translateX(-50%) translateY(0);}
+body.playing::before{content:'';position:fixed;inset:0;
+  background:radial-gradient(ellipse at 15% 85%,rgba(255,107,157,0.07),transparent 55%),
+             radial-gradient(ellipse at 85% 15%,rgba(135,206,235,0.07),transparent 55%);
+  pointer-events:none;z-index:0;animation:discoGlow 3s ease-in-out infinite;}
+@keyframes discoGlow{0%,100%{opacity:0.5;}50%{opacity:1;}}
+@media(max-width:480px){#music-player{width:calc(100vw - 30px);left:15px;}}
+</style>
+
+<div class="mp-toast" id="mp-toast">🎵 Now Playing!</div>
+
+<div id="music-player">
+  <div id="mp-mini" onclick="mpUnmin()">🎵</div>
+  <div id="mp-body">
+    <div class="mp-top">
+      <div class="mp-art" id="mp-art">🎊</div>
+      <div class="mp-info">
+        <div class="mp-name" id="mp-name">Birthday Kaka Wrld 🎂</div>
+        <div class="mp-artist" id="mp-artist">🎤 Shreya’s birthday track</div>
+      </div>
+      <button class="mp-minbtn" onclick="mpMin()">➖</button>
+    </div>
+    <div class="mp-vis" id="mp-vis"></div>
+    <div class="mp-lyrics" id="mp-lyrics">🎵 Birthday Kaka Wrld — press play to replay! 🎉</div>
+    <div class="mp-prog-row">
+      <span class="mp-time" id="mp-t1">0:00</span>
+      <div class="mp-prog-bar" onclick="mpSeek(event)"><div class="mp-prog-fill" id="mp-fill"></div></div>
+      <span class="mp-time" id="mp-t2">—:——</span>
+    </div>
+    <div class="mp-controls">
+      <button class="mp-ctrl" onclick="mpSkipB()" title="Back 10 seconds">⏪</button>
+      <button class="mp-pp" id="mp-pp" onclick="mpToggle()">▶️</button>
+      <button class="mp-ctrl" onclick="mpSkipF()" title="Forward 10 seconds">⏩</button>
+    </div>
+    <div class="mp-vol">
+      <span>🔈</span>
+      <input type="range" class="mp-vol-sl" id="mp-vol" min="0" max="100" value="70" oninput="mpSetVol(this.value)"/>
+      <span>🔊</span>
+    </div>
+    <audio id="custom-audio-elem" preload="metadata" loop style="display:none;">
+      <source src="./Birthday%20Kaka%20Wrld.m4a" type="audio/mp4"/>
+    </audio>
+  </div>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════
+   🎵  BIRTHDAY MUSIC ENGINE  (Web Audio API)
+   "Tere Birthday Pe Goli Chalvavenge" party vibe
+   3 synthesised tracks · lyrics · visualiser · controls
+   ═══════════════════════════════════════════════════════ */
+let AC=null,AG=null,AN=null,AV=null;
+let mpOn=false,mpSched=null,mpNext=0;
+let mpStep=0,mpMel=0;
+let mpOff=0,mpT0=0,mpTrack=0,mpVol=0.7;
+let mpLTimer=null,mpNTimer=null,mpVFrame=null,mpLyric=0;
+
+const BPM=126,BEAT=60/BPM;
+const Hz={_:0,
+  C3:130.81,D3:146.83,E3:164.81,F3:174.61,G3:196,A3:220,B3:246.94,
+  C4:261.63,D4:293.66,E4:329.63,F4:349.23,G4:392,A4:440,B4:493.88,
+  C5:523.25,D5:587.33,E5:659.25,F5:698.46,G5:783.99,A5:880,B5:987.77,C6:1046.5,
+  Gb5:739.99,Ab5:830.61,Bb5:932.33};
+
+const TRACKS=[
+  {name:"Tere Birthday Pe Goli Chalvavenge 🎊",artist:"🎤 Desi Birthday Banger • Shreya's Mix",e:"🎊",
+   mel:[[Hz.G4,.5,.9],[Hz.G4,.5,.7],[Hz.A4,1,.9],[Hz.G4,1,.9],[Hz.C5,1,.9],[Hz.B4,2,.85],
+        [Hz.G4,.5,.9],[Hz.G4,.5,.7],[Hz.A4,1,.9],[Hz.G4,1,.9],[Hz.D5,1,.9],[Hz.C5,2,.85],
+        [Hz.G4,.5,.9],[Hz.G4,.5,.7],[Hz.G5,1,.9],[Hz.E5,1,.9],[Hz.C5,1,.9],[Hz.B4,1,.85],[Hz.A4,2,.8],
+        [Hz.F5,.5,.9],[Hz.F5,.5,.75],[Hz.E5,1,.9],[Hz.C5,1,.9],[Hz.D5,1,.9],[Hz.C5,2,.85],
+        [Hz.C5,.5,.9],[Hz.B4,.5,.8],[Hz.A4,.5,.8],[Hz.G4,.5,.8],
+        [Hz.A4,.5,.9],[Hz.B4,.5,.8],[Hz.C5,1,.95],[Hz.E5,1,.9],[Hz.D5,2,.85],
+        [Hz.E5,.5,.9],[Hz.D5,.5,.8],[Hz.C5,.5,.8],[Hz.B4,.5,.8],
+        [Hz.C5,1,.9],[Hz.G4,1,.8],[Hz.A4,2,.9]],
+   bass:[[Hz.C3,1],[Hz.C3,1],[Hz.F3,1],[Hz.G3,1],[Hz.C3,1],[Hz.C3,1],[Hz.F3,1],[Hz.G3,1]],
+   lyr:["🎉 Aaj hai teri birthday, Shreya!",
+        "🎊 Tere birthday pe goli chalvavenge! 🔥",
+        "💥 Party hard, aaj ka din hai tera!",
+        "🎈 Saari duniya jaane tu hai best!",
+        "🌟 Gurnayan ki taraf se dil se! 💖",
+        "🎂 Make a wish, birthday queen!",
+        "🥳 20 saal ki ho gayi — LEGEND! 👑",
+        "💃 Nacho, gao, jashna manao!",
+        "🎵 Teri hansi sabse pyaari hai!",
+        "🌈 Shreya Gupta — forever iconic!",
+        "🎀 Love you yaar, Happy Birthday!! 💕"]},
+  {name:"Happy Birthday Shreya! 🎂✨",artist:"🎤 Gurnayan's Gift Track",e:"🎂",
+   mel:[[Hz.G4,.75,.9],[Hz.G4,.25,.7],[Hz.A4,1,.9],[Hz.G4,1,.9],[Hz.C5,1,.95],[Hz.B4,2,.85],
+        [Hz.G4,.75,.9],[Hz.G4,.25,.7],[Hz.A4,1,.9],[Hz.G4,1,.9],[Hz.D5,1,.95],[Hz.C5,2,.85],
+        [Hz.G4,.75,.9],[Hz.G4,.25,.7],[Hz.G5,1,.95],[Hz.E5,1,.9],[Hz.C5,1,.9],[Hz.B4,1,.9],[Hz.A4,2,.85],
+        [Hz.F5,.75,.9],[Hz.F5,.25,.7],[Hz.E5,1,.9],[Hz.C5,1,.9],[Hz.D5,1,.9],[Hz.C5,2,.85]],
+   bass:[[Hz.G3,1],[Hz.G3,1],[Hz.C3,1],[Hz.D3,1],[Hz.G3,1],[Hz.G3,1],[Hz.C3,1],[Hz.D3,1]],
+   lyr:["🎂 Happy Birthday to youuu~","🎵 Happy Birthday to youuu~",
+        "🌟 Happy Birthday dear Shreya~","🎉 Happy Birthday to youuuu!! 🎊",
+        "💖 May all your dreams come true!","✨ You deserve the whole world!",
+        "🥳 20 and absolutely THRIVING!","🎀 From Gurnayan with loveee 💗"]},
+  {name:"Paagal Dost Mix 🤪🎈🔥",artist:"🎤 Best Friend Banger Ft. Chaos",e:"🤪",
+   mel:[[Hz.C5,.25,1],[Hz.E5,.25,1],[Hz.G5,.25,1],[Hz.C6,.5,1],
+        [Hz.C6,.5,.9],[Hz.G5,.5,.8],[Hz.E5,.5,.8],[Hz.C5,.5,.8],
+        [Hz.D5,.25,1],[Hz.Gb5,.25,1],[Hz.A5,.5,1],
+        [Hz.A5,.5,.9],[Hz.Gb5,.5,.8],[Hz.D5,1,.9],
+        [Hz.E5,.5,.9],[Hz.Gb5,.5,.9],[Hz.G5,.5,.9],[Hz.A5,.5,.9],
+        [Hz.B5,1,1],[Hz.A5,.5,.9],[Hz.G5,.5,.9],
+        [Hz.E5,.5,.9],[Hz.D5,.5,.9],[Hz.C5,1,.9],[Hz.G4,1,.9],
+        [Hz.A4,.5,.9],[Hz.B4,.5,.9],[Hz.C5,2,1]],
+   bass:[[Hz.C3,.5],[Hz.E3,.5],[Hz.G3,.5],[Hz.C3,.5],
+         [Hz.F3,.5],[Hz.A3,.5],[Hz.G3,.5],[Hz.B3,.5],
+         [Hz.C3,.5],[Hz.E3,.5],[Hz.G3,.5],[Hz.C3,.5],
+         [Hz.F3,.5],[Hz.A3,.5],[Hz.G3,.5],[Hz.B3,.5]],
+   lyr:["🤪 Yaar kya scene hai — BIRTHDAY! 🎊",
+        "🔥 Goli chalvavenge aaj hum sab!!",
+        "🎈 Pop pop pop — balloons everywhere!",
+        "😂 Tu hasegi, mein nachungi!", 
+        "🌈 Rang birangi life teri Shreya!",
+        "💥 BOOM! Fireworks for the QUEEN! 👑",
+        "🎊 Best friend ki best birthday!",
+        "⭐ Star hai tu — shine karte reh!"]}
+];
+
+const KICK =[1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0];
+const SNARE=[0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0];
+const HHAT =[1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0];
+
+function mpInit(){
+  if(AC) return;
+  AC=new(window.AudioContext||window.webkitAudioContext)();
+  AG=AC.createGain(); AG.gain.value=mpVol;
+  AN=AC.createAnalyser(); AN.fftSize=64;
+  AV=new Uint8Array(AN.frequencyBinCount);
+  AG.connect(AN); AN.connect(AC.destination);
+}
+
+function mpOsc(f,type,t,d,v,det=0){
+  if(!AC||f<=0) return;
+  const o=AC.createOscillator(),g=AC.createGain();
+  o.type=type; o.frequency.value=f; o.detune.value=det;
+  g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(v,t+0.01);
+  g.gain.setValueAtTime(v,t+d*0.72); g.gain.exponentialRampToValueAtTime(0.0001,t+d);
+  o.connect(g); g.connect(AG); o.start(t); o.stop(t+d+0.05);
+}
+
+function mpDrum(type,t){
+  if(!AC) return;
+  const g=AC.createGain(); g.connect(AG);
+  if(type==='kick'){
+    const o=AC.createOscillator(); o.type='sine';
+    o.frequency.setValueAtTime(170,t); o.frequency.exponentialRampToValueAtTime(38,t+0.18);
+    g.gain.setValueAtTime(0.75,t); g.gain.exponentialRampToValueAtTime(0.0001,t+0.28);
+    o.connect(g); o.start(t); o.stop(t+0.32);
+  } else if(type==='snare'){
+    const b=AC.createBuffer(1,AC.sampleRate*0.14,AC.sampleRate);
+    const d2=b.getChannelData(0); for(let i=0;i<d2.length;i++) d2[i]=(Math.random()*2-1)*0.55;
+    const s=AC.createBufferSource(),bp=AC.createBiquadFilter();
+    bp.type='bandpass'; bp.frequency.value=2800; bp.Q.value=0.7;
+    s.buffer=b; s.connect(bp); bp.connect(g);
+    g.gain.setValueAtTime(0.45,t); g.gain.exponentialRampToValueAtTime(0.0001,t+0.14);
+    s.start(t); s.stop(t+0.18);
+  } else {
+    const b=AC.createBuffer(1,AC.sampleRate*0.06,AC.sampleRate);
+    const d2=b.getChannelData(0); for(let i=0;i<d2.length;i++) d2[i]=(Math.random()*2-1)*0.28;
+    const s=AC.createBufferSource(),hp=AC.createBiquadFilter();
+    hp.type='highpass'; hp.frequency.value=7500;
+    s.buffer=b; s.connect(hp); hp.connect(g);
+    g.gain.setValueAtTime(0.22,t); g.gain.exponentialRampToValueAtTime(0.0001,t+0.06);
+    s.start(t); s.stop(t+0.1);
+  }
+}
+
+function mpSchedule(){
+  if(!mpOn) return;
+  const now=AC.currentTime;
+  while(mpNext<now+0.15){
+    if(KICK[mpStep])  mpDrum('kick', mpNext);
+    if(SNARE[mpStep]) mpDrum('snare',mpNext);
+    if(HHAT[mpStep])  mpDrum('hihat',mpNext);
+    if(mpStep%2===0){
+      const m=TRACKS[mpTrack].mel;
+      const [f,d,v]=m[mpMel%m.length];
+      mpOsc(f,'triangle',mpNext,d*BEAT*0.82,v*0.23);
+      if(f>0) mpOsc(f,'sine',mpNext,d*BEAT*0.82,v*0.10,8);
+      mpMel++;
+    }
+    if(mpStep%4===0){
+      const bl=TRACKS[mpTrack].bass;
+      const [bf,bd]=bl[Math.floor(mpStep/4)%bl.length];
+      mpOsc(bf,'sawtooth',mpNext,bd*BEAT*0.78,0.17);
+      mpOsc(bf*2,'sine',mpNext,bd*BEAT*0.78,0.06);
+    }
+    mpStep=(mpStep+1)%16;
+    mpNext+=BEAT/4;
+  }
+}
+
+/* Legacy references remain inert; playback is handled by the local birthday track below. */
+let ytPlayer=null, ytReady=false, ytPlaying=false;
+
+function mpToggle(){
+  mpInit();
+  if(AC && AC.state==='suspended') AC.resume();
+
+  // If YouTube player is available, prioritize YouTube playback
+  if(ytPlayer && ytReady && typeof ytPlayer.getPlayerState==='function'){
+    const st=ytPlayer.getPlayerState();
+    if(st===YT.PlayerState.PLAYING){
+      ytPlayer.pauseVideo();
+    } else {
+      if(mpOn) mpPause();
+      if(customAudio && !customAudio.paused) customAudio.pause();
+      ytPlayer.unMute();
+      ytPlayer.playVideo();
+    }
+    return;
+  }
+
+  if(customAudio && customAudio.src){
+    if(customAudio.paused){
+      customAudio.play();
+      document.getElementById('mp-pp').textContent='⏸️';
+      document.body.classList.add('playing');
+      mpStartLyrics(); mpStartNotes();
+    }else{
+      customAudio.pause();
+      document.getElementById('mp-pp').textContent='▶️';
+      document.body.classList.remove('playing');
+      clearInterval(mpLTimer); clearInterval(mpNTimer);
+    }
+    return;
+  }
+  mpOn ? mpPause() : mpPlay();
+}
+function mpPlay(){
+  if(ytPlayer && ytReady && ytPlaying && typeof ytPlayer.pauseVideo==='function'){
+    ytPlayer.pauseVideo();
+  }
+  if(customAudio && customAudio.src && !customAudio.paused) customAudio.pause();
+  mpOn=true;
+  mpT0=AC.currentTime-mpOff;
+  mpNext=AC.currentTime+0.05;
+  document.getElementById('mp-pp').textContent='⏸️';
+  document.getElementById('mp-art').classList.remove('paused');
+  document.body.classList.add('playing');
+  clearInterval(mpSched);
+  mpSched=setInterval(mpSchedule,80);
+  mpStartLyrics(); mpStartNotes(); mpProg();
+}
+function mpPause(){
+  mpOn=false; mpOff=AC.currentTime-mpT0;
+  clearInterval(mpSched);
+  document.getElementById('mp-pp').textContent='▶️';
+  document.getElementById('mp-art').classList.add('paused');
+  document.body.classList.remove('playing');
+  clearInterval(mpLTimer); clearInterval(mpNTimer);
+}
+function mpNext2(){
+  if(ytPlayer && ytReady && ytPlaying) ytPlayer.pauseVideo();
+  mpTrack=(mpTrack+1)%TRACKS.length;
+  mpReset();
+}
+function mpPrev(){
+  if(ytPlayer && ytReady && ytPlaying) ytPlayer.pauseVideo();
+  mpTrack=(mpTrack+TRACKS.length-1)%TRACKS.length;
+  mpReset();
+}
+function mpReset(){
+  if(customAudio && customAudio.src){ customAudio.pause(); customAudio.src=""; }
+  mpMel=0; mpStep=0; mpOff=0; mpLyric=0; clearInterval(mpLTimer);
+  const t=TRACKS[mpTrack];
+  document.getElementById('mp-name').textContent=t.name;
+  document.getElementById('mp-artist').textContent=t.artist;
+  document.getElementById('mp-art').textContent=t.e;
+  mpShowToast('🎵 '+t.name);
+  if(mpOn){ mpNext=AC.currentTime+0.05; mpT0=AC.currentTime; mpStartLyrics(); }
+}
+// rename to avoid conflict with outer mpNext variable
+const mpNext_fn=function(){ mpTrack=(mpTrack+1)%TRACKS.length; mpReset(); };
+// fix button onclick
+document.querySelector('.mp-ctrl[onclick="mpNext()"]') && 
+  document.querySelector('.mp-ctrl[onclick="mpNext()"]').setAttribute('onclick','mpNext2()');
+
+function mpShowToast(msg){
+  const el=document.getElementById('mp-toast');
+  el.textContent=msg; el.classList.add('on');
+  setTimeout(()=>el.classList.remove('on'),2800);
+}
+
+let customAudio=null, customAudioSrc=null;
+function loadCustomAudio(e){
+  const file=e.target.files[0];
+  if(!file) return;
+  mpInit();
+  if(mpOn) mpPause();
+  
+  if(!customAudio){
+    customAudio=document.getElementById('custom-audio-elem');
+    try{
+      const source=AC.createMediaElementSource(customAudio);
+      source.connect(AG);
+    }catch(err){}
+    
+    customAudio.addEventListener('timeupdate',()=>{
+      if(customAudio.duration){
+        const ratio=customAudio.currentTime/customAudio.duration;
+        document.getElementById('mp-fill').style.width=(ratio*100)+'%';
+        const fmt=s=>{const m=Math.floor(Math.abs(s)/60),sec=Math.floor(Math.abs(s)%60);return `${m}:${sec.toString().padStart(2,'0')}`;};
+        document.getElementById('mp-t1').textContent=fmt(customAudio.currentTime);
+        document.getElementById('mp-t2').textContent=fmt(customAudio.duration);
+      }
+    });
+    customAudio.addEventListener('ended',()=>{
+      document.getElementById('mp-pp').textContent='▶️';
+      document.body.classList.remove('playing');
+    });
+  }
+  
+  if(customAudioSrc) URL.revokeObjectURL(customAudioSrc);
+  customAudioSrc=URL.createObjectURL(file);
+  customAudio.src=customAudioSrc;
+  
+  const name=file.name.replace(/\.[^/.]+$/,"");
+  document.getElementById('mp-name').textContent=name;
+  document.getElementById('mp-artist').textContent="🎤 Loaded Audio File";
+  document.getElementById('mp-art').textContent="🎶";
+  
+  customAudio.volume=mpVol;
+  customAudio.play().then(()=>{
+    document.getElementById('mp-pp').textContent='⏸️';
+    document.body.classList.add('playing');
+    mpStartLyrics();
+    mpStartNotes();
+    mpShowToast('🎶 Playing: '+name);
+  }).catch(()=>{});
+}
+function mpSkipB(){
+  if(customAudio && customAudio.src){ customAudio.currentTime=Math.max(0,customAudio.currentTime-10); return; }
+  mpOff=Math.max(0,(AC.currentTime-mpT0)-10); if(mpOn) mpT0=AC.currentTime-mpOff;
+}
+function mpSkipF(){
+  if(customAudio && customAudio.src){ customAudio.currentTime=Math.min(customAudio.duration||0,customAudio.currentTime+10); return; }
+  mpOff=(AC.currentTime-mpT0)+10; if(mpOn) mpT0=AC.currentTime-mpOff;
+}
+function mpSeek(e){
+  const ratio=e.offsetX/e.currentTarget.offsetWidth;
+  if(customAudio && customAudio.src && customAudio.duration){ customAudio.currentTime=ratio*customAudio.duration; return; }
+  const ls=TRACKS[mpTrack].mel.reduce((a,[,d])=>a+d,0)*BEAT*2;
+  mpOff=ratio*ls; if(mpOn) mpT0=AC.currentTime-mpOff;
+}
+function mpSetVol(v){
+  mpVol=v/100;
+  if(AG) AG.gain.value=mpVol;
+  if(customAudio) customAudio.volume=mpVol;
+}
+function mpStartLyrics(){
+  clearInterval(mpLTimer); mpShowLyric();
+  mpLTimer=setInterval(()=>{ mpLyric=(mpLyric+1)%TRACKS[mpTrack].lyr.length; mpShowLyric(); },3000);
+}
+function mpShowLyric(){
+  const el=document.getElementById('mp-lyrics');
+  el.style.opacity='0'; el.style.transform='translateY(6px)';
+  setTimeout(()=>{
+    el.textContent=TRACKS[mpTrack].lyr[mpLyric];
+    el.style.transition='opacity 0.35s,transform 0.35s';
+    el.style.opacity='1'; el.style.transform='translateY(0)';
+  },220);
+}
+const NOTES=['🎵','🎶','♪','♫','🎼','🎸','🥁','🎹','✨','💥','🎊','🌟'];
+function mpStartNotes(){
+  clearInterval(mpNTimer);
+  mpNTimer=setInterval(()=>{
+    if(!mpOn && !ytPlaying && (!customAudio || customAudio.paused)) return;
+    const r=document.getElementById('music-player').getBoundingClientRect();
+    const n=document.createElement('div'); n.className='mp-note';
+    n.textContent=NOTES[Math.floor(Math.random()*NOTES.length)];
+    n.style.cssText=`left:${r.left+Math.random()*r.width}px;top:${r.top+20}px;font-size:${16+Math.random()*14}px;`;
+    document.body.appendChild(n);
+    setTimeout(()=>n.remove(),2100);
+  },650);
+}
+function mpBuildVis(){
+  const c=document.getElementById('mp-vis'); c.innerHTML='';
+  for(let i=0;i<22;i++){ const b=document.createElement('div'); b.className='mp-bar'; c.appendChild(b); }
+}
+function mpAnimVis(){
+  const bars=document.querySelectorAll('.mp-bar'); const N=bars.length;
+  (function loop(){
+    mpVFrame=requestAnimationFrame(loop);
+    if(AN&&mpOn){
+      AN.getByteFrequencyData(AV);
+      for(let i=0;i<N;i++){
+        const v=AV[Math.floor(i*AV.length/N)];
+        bars[i].style.height=(4+v/255*28)+'px';
+        const h=i/N*300;
+        bars[i].style.background=`linear-gradient(to top,hsl(${h},90%,62%),hsl(${(h+60)%360},90%,78%))`;
+      }
+    } else if(ytPlaying){
+      const t=Date.now()/120;
+      for(let i=0;i<N;i++){
+        const h=5+Math.abs(Math.sin(t*0.8+i*0.45))*20+Math.abs(Math.cos(t*1.3+i*0.8))*9;
+        bars[i].style.height=Math.min(32,Math.max(4,h))+'px';
+        const hcol=(i/N*260+Date.now()/40)%360;
+        bars[i].style.background=`linear-gradient(to top,hsl(${hcol},95%,65%),hsl(${(hcol+50)%360},95%,75%))`;
+      }
+    } else {
+      const t=Date.now()/350;
+      for(let i=0;i<N;i++){
+        const h=4+Math.sin(t+i*0.6)*7+Math.cos(t*1.2+i*0.9)*4;
+        bars[i].style.height=Math.max(4,h)+'px';
+      }
+    }
+  })();
+}
+function mpProg(){
+  if(!AC) return;
+  const ls=TRACKS[mpTrack].mel.reduce((a,[,d])=>a+d,0)*BEAT*2||1;
+  const el=mpOn?AC.currentTime-mpT0:mpOff;
+  document.getElementById('mp-fill').style.width=((el%ls)/ls*100)+'%';
+  const fmt=s=>{const m=Math.floor(Math.abs(s)/60),sec=Math.floor(Math.abs(s)%60);return `${m}:${sec.toString().padStart(2,'0')}`;};
+  document.getElementById('mp-t1').textContent=fmt(el%ls);
+  document.getElementById('mp-t2').textContent=fmt(ls);
+  setTimeout(mpProg,450);
+}
+function mpMin(){ document.getElementById('music-player').classList.add('mp-min'); }
+function mpUnmin(){ document.getElementById('music-player').classList.remove('mp-min'); }
+
+/* drag */
+(function(){
+  const el=document.getElementById('music-player');
+  let drag=false,ox=0,oy=0;
+  const s=(cx,cy)=>{ drag=true; const r=el.getBoundingClientRect(); ox=cx-r.left; oy=cy-r.top; };
+  const m=(cx,cy)=>{ if(!drag) return; el.style.left=(cx-ox)+'px'; el.style.top=(cy-oy)+'px'; el.style.bottom='auto'; };
+  const e2=()=>{ drag=false; };
+  el.addEventListener('mousedown',e=>{ if(e.target.tagName==='INPUT'||e.target.tagName==='BUTTON') return; e.preventDefault(); s(e.clientX,e.clientY); });
+  document.addEventListener('mousemove',e=>m(e.clientX,e.clientY));
+  document.addEventListener('mouseup',e2);
+  el.addEventListener('touchstart',e=>{ if(e.target.tagName==='INPUT'||e.target.tagName==='BUTTON') return; s(e.touches[0].clientX,e.touches[0].clientY); },{passive:true});
+  document.addEventListener('touchmove',e=>m(e.touches[0].clientX,e.touches[0].clientY),{passive:true});
+  document.addEventListener('touchend',e2);
+})();
+
+/* keyboard */
+document.addEventListener('keydown',e=>{
+  if(e.code==='Space'&&e.target.tagName!=='INPUT'){ e.preventDefault(); mpToggle(); }
+  if(e.code==='ArrowRight') mpNext2();
+  if(e.code==='ArrowLeft')  mpPrev();
+});
+
+/* boot */
+mpBuildVis(); mpAnimVis();
+</script>
+<script>
+customAudio=document.getElementById('custom-audio-elem');
+customAudio.volume=0.7;
+
+function mpPlayBirthdayTrack(){
+  const playback=customAudio.play();
+  if(playback&&typeof playback.then==='function'){
+    playback.then(mpSyncBirthdayTrackUi).catch(error=>{
+      mpShowToast('Tap ▶️ to play Birthday Kaka Wrld');
+      console.error('Could not play Birthday Kaka Wrld:',error);
+    });
+  }else{
+    mpSyncBirthdayTrackUi();
+  }
+}
+function mpSyncBirthdayTrackUi(){
+  mpOn=!customAudio.paused;
+  document.getElementById('mp-pp').textContent=mpOn?'⏸️':'▶️';
+  document.getElementById('mp-art').classList.toggle('paused',!mpOn);
+  document.body.classList.toggle('playing',mpOn);
+  if(mpOn){
+    mpStartNotes();
+    mpShowToast('🎵 Playing Birthday Kaka Wrld');
+  }else{
+    clearInterval(mpNTimer);
+  }
+}
+function mpToggle(){
+  if(customAudio.paused) mpPlayBirthdayTrack();
+  else customAudio.pause();
+}
+function mpSkipB(){ customAudio.currentTime=Math.max(0,customAudio.currentTime-10); }
+function mpSkipF(){
+  const duration=Number.isFinite(customAudio.duration)?customAudio.duration:customAudio.currentTime+10;
+  customAudio.currentTime=Math.min(duration,customAudio.currentTime+10);
+}
+function mpPrev(){ mpSkipB(); }
+function mpNext2(){ mpSkipF(); }
+function mpSetVol(value){
+  customAudio.volume=Math.max(0,Math.min(1,Number(value)/100));
+}
+function mpSeek(event){
+  const rect=event.currentTarget.getBoundingClientRect();
+  if(!Number.isFinite(customAudio.duration)||!rect.width) return;
+  const ratio=Math.max(0,Math.min(1,(event.clientX-rect.left)/rect.width));
+  customAudio.currentTime=ratio*customAudio.duration;
+}
+function updateBirthdayTrackProgress(){
+  const duration=customAudio.duration;
+  const current=customAudio.currentTime;
+  const format=seconds=>`${Math.floor(seconds/60)}:${String(Math.floor(seconds%60)).padStart(2,'0')}`;
+  document.getElementById('mp-t1').textContent=format(current);
+  document.getElementById('mp-t2').textContent=Number.isFinite(duration)?format(duration):'—:——';
+  document.getElementById('mp-fill').style.width=Number.isFinite(duration)?`${current/duration*100}%`:'0%';
+}
+customAudio.addEventListener('play',mpSyncBirthdayTrackUi);
+customAudio.addEventListener('pause',mpSyncBirthdayTrackUi);
+customAudio.addEventListener('timeupdate',updateBirthdayTrackProgress);
+customAudio.addEventListener('loadedmetadata',updateBirthdayTrackProgress);
+</script>
+</body>
+</html>
